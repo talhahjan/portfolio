@@ -381,79 +381,155 @@ in both backend-devlopment as we as frontend-devlopment
 <section id="skill" class="section pt-10 pb-8 px-6">
   <h2 data-heading="My Skills" class="before:content-[attr(data-heading)] before:block before:font-medium before:text-sm before:text-slate-400 section_title text-center text-2xl mb-12 font-bold font-Courgette text-rose-500 dark:text-rose-500">technical Level</h2> 
 
-<div class="skill_container container grid gap-y-0">
+<div class="skill_container container grid  grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-10">
   <!-- ============ frontend skills============ -->
-<div class="skill_content">
-  <div class="skill_header">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-braces text-rose-500 mr-2" viewBox="0 0 16 16">
-      <path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z"/>
+  <div class="skill_content gap-x-8">
+    <div class="skill_header flex justify-center items-center mb-1 cursor-pointer open min-w-[250px]">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-braces text-rose-500 mr-2 skills_icon" viewBox="0 0 16 16">
+        <path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6z"/>
+      </svg>
+      <div>
+        <h1 class="skills_titles font-semibold">Frontend devlopment</h1>
+        <span class="skills_subtitle text-sm text-slate-400">More Than 4 years</span>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-rose-500 ml-auto duration-300 skills_arrow">
+        <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+      </svg>
+    </div>
+  
+  
+  <div class="skills_list grid gap-y-2 ">
+  
+    <div class="skills_data">
+  <div class="skills_titles flex justify-between">
+    <h3 class="skill_name font-medium">Html</h3>
+    <span class="skill_number">90%</span>
+  </div>
+    </div>
+  
+    <div class="skills_bar h-1 rounded-md bg-slate-300">
+      <span class="skill_percentage skill_html h-1 rounded-md block bg-rose-500 w-[90%]"></span>
+    </div>
+  
+  
+  
+    <div class="skills_data">
+      <div class="skills_titles flex justify-between ">
+      <h3 class="skill_name font-medium">Css</h3>
+      <span class="skill_number">80%</span>
+      </div>
+    </div>
+    
+    <div class="skills_bar h-1 rounded-md bg-slate-300">
+      <span class="skill_percentage skill_html h-1 rounded-md block bg-rose-500 w-[80%]"></span>
+    </div>
+  
+    <div class="skills_data">
+      <div class="skills_titles flex justify-between">
+      <h3 class="skill_name  font-medium">Javascript</h3>
+      <span class="skill_number">60%</span>
+      </div>
+    </div>
+    
+    <div class="skills_bar h-1 rounded-md bg-slate-300">
+      <span class="skill_percentage skill_html h-1 rounded-md block bg-rose-500 w-[60%]"></span>
+    </div>
+  
+  
+  
+  
+    <div class="skills_data">
+      <div class="skills_titles flex justify-between">
+      <h3 class="skill_name font-medium">React</h3>
+      <span class="skill_number">85%</span>
+      </div>
+    </div>
+    
+    <div class="skills_bar h-1 rounded-md bg-slate-300">
+      <span class="skill_percentage skill_html h-1 rounded-md block bg-rose-500 w-[85%]"></span>
+    </div>
+  
+  
+  
+  </div>
+  
+  </div>
+  <!--  =========== frontend- skill ends=================== -->
+    <!-- ============ frontend skills============ -->
+<div class="skill_content gap-x-8">
+
+  <div class="skill_header flex justify-center items-center mb-1 cursor-pointer open min-w-[250px]">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-braces text-rose-500 mr-2 skills_icon" viewBox="0 0 24 24">
+      <path d="M8,6h3a1,1,0,0,0,0-2H8A1,1,0,0,0,8,6Zm8,0a1,1,0,1,0-1-1A1,1,0,0,0,16,6Zm0,4a1,1,0,1,0,1,1A1,1,0,0,0,16,10Zm5,9H14.82A3,3,0,0,0,13,17.18V15h4a3,3,0,0,0,3-3V10a3,3,0,0,0-.78-2A3,3,0,0,0,20,6V4a3,3,0,0,0-3-3H7A3,3,0,0,0,4,4V6a3,3,0,0,0,.78,2A3,3,0,0,0,4,10v2a3,3,0,0,0,3,3h4v2.18A3,3,0,0,0,9.18,19H3a1,1,0,0,0,0,2H9.18a3,3,0,0,0,5.64,0H21a1,1,0,0,0,0-2ZM6,4A1,1,0,0,1,7,3H17a1,1,0,0,1,1,1V6a1,1,0,0,1-1,1H7A1,1,0,0,1,6,6Zm1,9a1,1,0,0,1-1-1V10A1,1,0,0,1,7,9H17a1,1,0,0,1,1,1v2a1,1,0,0,1-1,1Zm5,8a1,1,0,1,1,1-1A1,1,0,0,1,12,21ZM11,10H8a1,1,0,0,0,0,2h3a1,1,0,0,0,0-2Z"/>
     </svg>
     <div>
-      <h1 class="skills_titles text-base font-semibold">Frontend devloper</h1>
+      <h1 class="skills_titles font-semibold">Backend devlopment</h1>
       <span class="skills_subtitle text-sm text-slate-400">More Than 4 years</span>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short ml-auto duration-300" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-rose-500 ml-auto duration-300 skills_arrow">
+      <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
     </svg>
+
+
+
   </div>
 
 
-<div class="skills_list grid gap-y-1">
+<div class="skills_list grid gap-y-2">
 
   <div class="skills_data">
-<div class="skills_titles flex justify-between mb-1">
-  <h3 class="skill_name font-medium">Html</h3>
+<div class="skills_titles flex justify-between">
+  <h3 class="skill_name font-medium">PHP  </h3>
   <span class="skill_number">90%</span>
 </div>
   </div>
 
-  <div class="skills_bar">
-    <span class="skill_percentage skill_html"></span>
+  <div class="skills_bar h-1 rounded-md bg-slate-300">
+    <span class="skill_percentage skill_html h-1 rounded-md block bg-rose-500 w-[90%]"></span>
   </div>
 
 
 
   <div class="skills_data">
-    <div class="skills_titles flex justify-between mb-1">
-    <h3 class="skill_name font-medium">Css</h3>
+    <div class="skills_titles flex justify-between">
+    <h3 class="skill_name font-medium">laravel</h3>
     <span class="skill_number">80%</span>
     </div>
   </div>
   
-  <div class="skills_bar">
-    <span class="skill_percentage skill_css"></span>
+  <div class="skills_bar h-1 rounded-md bg-slate-300">
+    <span class="skill_percentage skill_html h-1 rounded-md block bg-rose-500 w-[80%]"></span>
   </div>
 
   <div class="skills_data">
-    <div class="skills_titles flex justify-between mb-1">
-    <h3 class="skill_name  font-medium">Javascript</h3>
+    <div class="skills_titles flex justify-between">
+    <h3 class="skill_name  font-medium">Mysql</h3>
     <span class="skill_number">60%</span>
     </div>
   </div>
   
-  <div class="skills_bar">
-    <span class="skill_percentage skill_js"></span>
+  <div class="skills_bar h-1 rounded-md bg-slate-300">
+    <span class="skill_percentage skill_html h-1 rounded-md block bg-rose-500 w-[60%]"></span>
   </div>
+
 
 
 
   <div class="skills_data">
-    <div class="skills_titles flex justify-between mb-1">
-    <h3 class="skill_name font-medium">React</h3>
+    <div class="skills_titles flex justify-between">
+    <h3 class="skill_name font-medium">Firebase</h3>
     <span class="skill_number">85%</span>
     </div>
   </div>
   
-  <div class="skills_bar h-1 rounded-sm">
-    <span class="skill_percentage skill_react"></span>
+  <div class="skills_bar h-1 rounded-md bg-slate-300">
+    <span class="skill_percentage skill_html h-1 rounded-md block bg-rose-500 w-[85%]"></span>
   </div>
 
-
-
 </div>
 
 </div>
-
+<!--  =========== frontend- skill ends =================== -->
 </div>
 
 </section>

@@ -6,7 +6,16 @@ const navBar = document.querySelector("header nav"),
   html = document.documentElement,
   defaultMode = "dark", // string : 'dark' , 'light' or 'system'
   //check if darkMode is active in user system
-  darkModeQuery = matchMedia("(prefers-color-scheme: dark)");
+  darkModeQuery = matchMedia("(prefers-color-scheme: dark)"),
+  skillsContent = document.getElementsByClassName("skill_content"),
+  skillHeader = document.querySelectorAll(".skill_header");
+
+const toggleSkills = (e) => {
+  console.log(itemClass);
+  for (i = 0; i < skillsContent.length; i++) {}
+};
+
+skillHeader.forEach((el) => {});
 
 window.addEventListener("scroll", () => {
   navBar.classList.toggle("navbar-fixed", window.scrollY > 0);

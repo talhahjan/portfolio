@@ -18,7 +18,15 @@ body {
 a {
   @apply text-black hover:text-slate-500 dark:text-slate-400 dark:hover:text-slate-100 duration-300;
 }
-
+.close {
+  @apply [&~div]:h-0 [&~div]:overflow-hidden;
+}
+.open .skills_arrow {
+  @apply -rotate-180 duration-300;
+}
+.open {
+  @apply h-max mb-3;
+}
 .navbar-fixed {
   @apply shadow-lg dark:bg-slate-800/10 dark:border-b border-indigo-500/20;
 }
