@@ -7,6 +7,9 @@ module.exports = {
   darkMode: "class", // or media & false
   theme: {
     extend: {
+      animation: {
+        fillBars: "fillBars 10s ease-in-out",
+      },
       padding: {
         "1/3": "33.333333%",
         "2/3": "66.666667",

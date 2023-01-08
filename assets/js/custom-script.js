@@ -11,8 +11,10 @@ const navBar = document.querySelector("header nav"),
   skillHeader = document.querySelectorAll(".skill_header");
 
 const toggleSkills = (e) => {
-  console.log(itemClass);
-  for (i = 0; i < skillsContent.length; i++) {}
+  let itemClass = document.parentNode.className;
+  for (i = 0; i < skillsContent.length; i++) {
+    skillsContent[i].className = "s";
+  }
 };
 
 skillHeader.forEach((el) => {});
