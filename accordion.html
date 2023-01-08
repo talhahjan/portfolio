@@ -1,226 +1,281 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        color: #6a6c6f;
-        background-color: #f1f3f6;
-        margin-top: 30px;
-      }
-
-      .container {
-        max-width: 960px;
-      }
-
-      .panel-default > .panel-heading {
-        color: #333;
-        background-color: #fff;
-        border-color: #e4e5e7;
-        padding: 0;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      .panel-default > .panel-heading a {
-        display: block;
-        padding: 10px 15px;
-      }
-
-      .panel-default > .panel-heading a:after {
-        content: "";
-        position: relative;
-        top: 1px;
-        display: inline-block;
-        font-family: "Glyphicons Halflings";
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        float: right;
-        transition: transform 0.25s linear;
-        -webkit-transition: -webkit-transform 0.25s linear;
-      }
-
-      .panel-default > .panel-heading a[aria-expanded="true"] {
-        background-color: #eee;
-      }
-
-      .panel-default > .panel-heading a[aria-expanded="true"]:after {
-        content: "\2212";
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-      }
-
-      .panel-default > .panel-heading a[aria-expanded="false"]:after {
-        content: "\002b";
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
-      }
-
-      .accordion-option {
-        width: 100%;
-        float: left;
-        clear: both;
-        margin: 15px 0;
-      }
-
-      .accordion-option .title {
-        font-size: 20px;
-        font-weight: bold;
-        float: left;
-        padding: 0;
-        margin: 0;
-      }
-
-      .accordion-option .toggle-accordion {
-        float: right;
-        font-size: 16px;
-        color: #6a6c6f;
-      }
-
-      .accordion-option .toggle-accordion:before {
-        content: "Expand All";
-      }
-
-      .accordion-option .toggle-accordion.active:before {
-        content: "Collapse All";
-      }
-    </style>
-  </head>
-  <body>
-    <div>
-      <div class="container">
-        <div class="accordion-option">
-          <h3 class="title">Lorem Ipsum</h3>
-          <a
-            href="javascript:void(0)"
-            class="toggle-accordion active"
-            accordion-id="#accordion"
-          ></a>
-        </div>
-        <div class="clearfix"></div>
-        <div
-          class="panel-group"
-          id="accordion"
-          role="tablist"
-          aria-multiselectable="true"
+<!-- ============== navbar start  ============== -->
+<nav
+  class="nav fixed-top w-full max-w-5xl font-Courgette z-50 px-4 backdrop-blur transition-colors duration-500 dark:text-white"
+>
+  <div class="nav-wrapper flex justify-between items-center h-12 leading-12">
+    <div class="toggle md:hidden" id="toggler">
+      <button class="hover:text-slate-500 duration-300">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="currentColor"
         >
-          <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingOne">
-              <h4 class="panel-title">
-                <a
-                  role="button"
-                  data-toggle="collapse"
-                  data-parent="#accordion"
-                  href="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne"
-                >
-                  Collapsible Group Item #1
-                </a>
-              </h4>
-            </div>
-            <div
-              id="collapseOne"
-              class="panel-collapse collapse in"
-              role="tabpanel"
-              aria-labelledby="headingOne"
+          <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="brand font-semibold text-pink-500 select-none">
+      Khalid Dashti
+    </div>
+    <ul
+      class="absolute -left-full top-14 bg-gray-900/90 md:bg-inherit duration-300 md:transition-none h-screen w-[70vw] md:h-full md:w-auto md:static flex flex-col md:flex-row items-start md:justify-center md:items-center gap-2 z-100 capitalize"
+      id="nav-menu"
+    >
+      <li class="w-full px-5 md:px-0 md:w-auto">
+        <a
+          href="#"
+          class="flex p-2 items-center gap-4 w-full hover:bg-slate-400/10 md:hover:bg-inherit rounded-md border border-transparent hover:border-slate-600/10 md:border-none relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-pink-500/50 text-white md:text-inherit hover:text-slate-200 md:hover:text-inherit"
+        >
+          <span class="md:hidden inline-block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-house"
+              viewBox="0 0 16 16"
             >
-              <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa
-                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably
-                haven't heard of them accusamus labore sustainable VHS.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingTwo">
-              <h4 class="panel-title">
-                <a
-                  class="collapsed"
-                  role="button"
-                  data-toggle="collapse"
-                  data-parent="#accordion"
-                  href="#collapseTwo"
-                  aria-expanded="true"
-                  aria-controls="collapseTwo"
-                >
-                  Collapsible Group Item #2
-                </a>
-              </h4>
-            </div>
-            <div
-              id="collapseTwo"
-              class="panel-collapse collapse in"
-              role="tabpanel"
-              aria-labelledby="headingTwo"
+              <path
+                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"
+              />
+            </svg>
+          </span>
+          <span>Home</span>
+        </a>
+      </li>
+      <li class="w-full px-5 md:px-0 md:w-auto">
+        <a
+          href="#"
+          class="flex p-2 items-center gap-4 w-full hover:bg-slate-400/10 md:hover:bg-inherit rounded-md border border-transparent hover:border-slate-600/10 md:border-none relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-pink-500/50 text-white md:text-inherit hover:text-slate-200 md:hover:text-inherit"
+        >
+          <span class="md:hidden inline-block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-person"
+              viewBox="0 0 16 16"
             >
-              <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa
-                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably
-                haven't heard of them accusamus labore sustainable VHS.
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingThree">
-              <h4 class="panel-title">
-                <a
-                  class="collapsed"
-                  role="button"
-                  data-toggle="collapse"
-                  data-parent="#accordion"
-                  href="#collapseThree"
-                  aria-expanded="true"
-                  aria-controls="collapseThree"
-                >
-                  Collapsible Group Item #3
-                </a>
-              </h4>
-            </div>
-            <div
-              id="collapseThree"
-              class="panel-collapse collapse in"
-              role="tabpanel"
-              aria-labelledby="headingThree"
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"
+              />
+            </svg>
+          </span>
+          <span>About</span>
+        </a>
+      </li>
+      <li class="w-full px-5 md:px-0 md:w-auto">
+        <a
+          href="#"
+          class="flex p-2 items-center gap-4 w-full hover:bg-slate-400/10 md:hover:bg-inherit rounded-md border border-transparent hover:border-slate-600/10 md:border-none relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-pink-500/50 text-white md:text-inherit hover:text-slate-200 md:hover:text-inherit"
+        >
+          <span class="md:hidden inline-block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-file-earmark-text"
+              viewBox="0 0 16 16"
             >
-              <div class="panel-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life
-                accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                non cupidatat skateboard dolor brunch. Food truck quinoa
-                nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
-                put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                excepteur butcher vice lomo. Leggings occaecat craft beer
-                farm-to-table, raw denim aesthetic synth nesciunt you probably
-                haven't heard of them accusamus labore sustainable VHS.
-              </div>
-            </div>
-          </div>
-        </div>
+              <path
+                d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"
+              />
+              <path
+                d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"
+              />
+            </svg>
+          </span>
+          <span>Skills</span>
+        </a>
+      </li>
+      <li class="w-full px-5 md:px-0 md:w-auto">
+        <a
+          href="#"
+          class="flex p-2 items-center gap-4 w-full hover:bg-slate-400/10 md:hover:bg-inherit rounded-md border border-transparent hover:border-slate-600/10 md:border-none relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-pink-500/50 text-white md:text-inherit hover:text-slate-200 md:hover:text-inherit"
+        >
+          <span class="md:hidden inline-block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-briefcase"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"
+              />
+            </svg>
+          </span>
+          <span>Services</span>
+        </a>
+      </li>
+
+      <li class="w-full px-5 md:px-0 md:w-auto">
+        <a
+          href="#"
+          class="flex p-2 items-center gap-4 w-full hover:bg-slate-400/10 md:hover:bg-inherit rounded-md border border-transparent hover:border-slate-600/10 md:border-none relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-pink-500/50 text-white md:text-inherit hover:text-slate-200 md:hover:text-inherit"
+        >
+          <span class="md:hidden inline-block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-images"
+              viewBox="0 0 16 16"
+            >
+              <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+              <path
+                d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z"
+              />
+            </svg>
+          </span>
+          <span>Fortpolio</span>
+        </a>
+      </li>
+
+      <li class="w-full px-5 md:px-0 md:w-auto">
+        <a
+          href="#"
+          class="flex p-2 items-center gap-4 w-full hover:bg-slate-400/10 md:hover:bg-inherit rounded-md border border-transparent hover:border-slate-600/10 md:border-none relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-pink-500/50 text-white md:text-inherit hover:text-slate-200 md:hover:text-inherit"
+        >
+          <span class="md:hidden inline-block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-envelope"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+              />
+            </svg>
+          </span>
+          <span>Contact </span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="grid grid-flow-col gap-2">
+      <div class="relative w-5 h-full dropdown">
+        <button
+          class="dropdown-toggle hover:text-slate-500 duration-300 link"
+          type="button"
+          id="themeIcon"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-display"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4c0 .667.083 1.167.25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75c.167-.333.25-.833.25-1.5H2s-2 0-2-2V4zm1.398-.855a.758.758 0 0 0-.254.302A1.46 1.46 0 0 0 1 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 0 0 .254-.302 1.464 1.464 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 0 0-.302-.254A1.46 1.46 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145z"
+            />
+          </svg>
+        </button>
+
+        <ul
+          class="absolute left-0 top-[calc(100%_+_.80rem)] -translate-y-2 hidden duration-300 bg-white dark:bg-slate-800 text-base z-50 rounded-lg shadow-lg py-2 dropdown-menu"
+          aria-labelledby="themeIcon"
+        >
+          <li>
+            <fieldset class="font-serif">
+              <input type="radio" class="hidden peer" name="theme" id="dark" />
+              <label
+                for="dark"
+                class="flex items-center gap-2 w-full py-2 px-4 duration-300 text-sm font-normal whitespace-nowrap cursor-pointer text-slate-800 dark:text-slate-100 hover:bg-slate-800/20 dark:hover:bg-gray-500/50 peer-checked:bg-rose-500/80 peer-checked:text-slate-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-moon-stars-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                  />
+                  <path
+                    d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+                  />
+                </svg>
+                <span>Dark</span>
+              </label>
+            </fieldset>
+          </li>
+
+          <li>
+            <fieldset class="font-serif">
+              <input
+                type="radio"
+                class="hidden peer"
+                name="theme"
+                id="light"
+                checked
+              />
+              <label
+                for="light"
+                class="flex items-center gap-2 w-full py-2 px-4 duration-300 text-sm font-normal whitespace-nowrap cursor-pointer text-slate-800 dark:text-slate-100 hover:bg-slate-800/20 dark:hover:bg-gray-500/50 peer-checked:bg-rose-500/80 peer-checked:text-slate-100"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-sun-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                  />
+                </svg>
+                Light</label
+              >
+            </fieldset>
+          </li>
+
+          <li>
+            <fieldset class="font-serif">
+              <input
+                type="radio"
+                class="hidden peer"
+                name="theme"
+                id="system"
+              />
+              <label
+                for="system"
+                class="flex items-center gap-2 w-full py-2 px-4 duration-300 dropdown-item text-sm font-normal whitespace-nowrap cursor-pointer text-slate-800 dark:text-slate-100 hover:bg-slate-800/20 dark:hover:bg-gray-500/50 peer-checked:bg-rose-500/80 peer-checked:text-slate-100"
+                data-dropdown-button
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 3H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h7v2H8v2h8v-2h-3v-2h7c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 14V5h16l.002 9H4z"
+                  ></path>
+                </svg>
+                System</label
+              >
+            </fieldset>
+          </li>
+        </ul>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+</nav>
+<!-- ============== nav bar end  ============== -->

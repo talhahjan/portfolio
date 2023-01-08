@@ -5293,10 +5293,6 @@ textarea.form-control.is-invalid{
   left: -0.25rem;
 }
 
-.top-0{
-  top: 0px;
-}
-
 .-left-full{
   left: -100%;
 }
@@ -5311,6 +5307,10 @@ textarea.form-control.is-invalid{
 
 .top-\[calc\(100\%_\+_\.80rem\)\]{
   top: calc(100% + .80rem);
+}
+
+.top-0{
+  top: 0px;
 }
 
 .isolate{
@@ -5526,6 +5526,10 @@ textarea.form-control.is-invalid{
 
 .h-1{
   height: 0.25rem;
+}
+
+.h-\[500px\]{
+  height: 500px;
 }
 
 .h-\[calc\(100\%-theme\(\'spacing\.1\'\)\)\]{
@@ -5946,6 +5950,10 @@ textarea.form-control.is-invalid{
 
 .grid-cols-\[repeat\(3\2c _100px\)\]{
   grid-template-columns: repeat(3, 100px);
+}
+
+.grid-cols-\[repeat\(3\2c _80px\)\]{
+  grid-template-columns: repeat(3, 80px);
 }
 
 .grid-cols-\[repeat\(auto-fit\2c minmax\(250px\2c 1fr\)\)\]{
@@ -6767,6 +6775,11 @@ textarea.form-control.is-invalid{
   padding-right: 0.5rem;
 }
 
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .py-2\.5{
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
@@ -6800,6 +6813,14 @@ textarea.form-control.is-invalid{
 
 .pb-1{
   padding-bottom: 0.25rem;
+}
+
+.pt-12{
+  padding-top: 3rem;
+}
+
+.pt-14{
+  padding-top: 3.5rem;
 }
 
 .pt-3{
@@ -7353,16 +7374,16 @@ textarea.form-control.is-invalid{
           backdrop-filter: none;
 }
 
-.transition{
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+.transition-colors{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-.transition-colors{
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -7418,12 +7439,18 @@ textarea.form-control.is-invalid{
   content: "hello";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #eeeeee;
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -7432,7 +7459,7 @@ body {
 
 .dark body{
   --tw-bg-opacity: 1;
-  background-color: rgb(28 25 23 / var(--tw-bg-opacity));
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(248 250 252 / var(--tw-text-opacity));
 }
@@ -7456,23 +7483,6 @@ a:hover{
 .dark a:hover{
   --tw-text-opacity: 1;
   color: rgb(241 245 249 / var(--tw-text-opacity));
-}
-
-.close .skills_list{
-  height: 0px;
-  overflow: hidden;
-}
-
-.open .skills_arrow{
-  --tw-rotate: -180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  transition-duration: 300ms;
-}
-
-.open{
-  margin-bottom: 0.75rem;
-  height: -moz-max-content;
-  height: max-content;
 }
 
 @keyframes fillBars {
@@ -7500,7 +7510,6 @@ a:hover{
 .wrapper{
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3rem;
   display: flex;
   height: 100vh;
   max-width: 64rem;
@@ -7969,6 +7978,10 @@ a:hover{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-\[repeat\(3\2c _100px\)\]{
+    grid-template-columns: repeat(3, 100px);
+  }
+
   .md\:flex-row{
     flex-direction: row;
   }
@@ -8115,11 +8128,6 @@ a:hover{
 
 .\[\&\>div\]\:font-light>div{
   font-weight: 300;
-}
-
-.\[\&\>div\]\:hover\:bg-rose-500:hover>div{
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 63 94 / var(--tw-bg-opacity));
 }
 
 .dark .\[\&\>div\]\:dark\:bg-white\/10>div{
