@@ -5357,11 +5357,6 @@ textarea.form-control.is-invalid{
   clear: none;
 }
 
-.mx-2{
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -5375,16 +5370,6 @@ textarea.form-control.is-invalid{
 .mx-96{
   margin-left: 24rem;
   margin-right: 24rem;
-}
-
-.my-3{
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.my-1{
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
 }
 
 .mt-12{
@@ -5407,14 +5392,6 @@ textarea.form-control.is-invalid{
   margin-bottom: 3rem;
 }
 
-.mt-6{
-  margin-top: 1.5rem;
-}
-
-.mb-3{
-  margin-bottom: 0.75rem;
-}
-
 .mr-4{
   margin-right: 1rem;
 }
@@ -5425,14 +5402,6 @@ textarea.form-control.is-invalid{
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.ml-5{
-  margin-left: 1.25rem;
-}
-
-.mr-5{
-  margin-right: 1.25rem;
 }
 
 .box-border{
@@ -5551,8 +5520,12 @@ textarea.form-control.is-invalid{
   height: 1px;
 }
 
-.h-3{
-  height: 0.75rem;
+.h-1\.5{
+  height: 0.375rem;
+}
+
+.h-1{
+  height: 0.25rem;
 }
 
 .h-\[calc\(100\%-theme\(\'spacing\.1\'\)\)\]{
@@ -5561,18 +5534,6 @@ textarea.form-control.is-invalid{
 
 .h-\[calc\(100\%-theme\(\"spacing\.1\"\)\)\]{
   height: calc(100% - 0.25rem);
-}
-
-.h-2{
-  height: 0.5rem;
-}
-
-.h-1{
-  height: 0.25rem;
-}
-
-.h-1\.5{
-  height: 0.375rem;
 }
 
 .w-full{
@@ -5591,10 +5552,6 @@ textarea.form-control.is-invalid{
   width: 12rem;
 }
 
-.w-96{
-  width: 24rem;
-}
-
 .w-max{
   width: -moz-max-content;
   width: max-content;
@@ -5606,10 +5563,6 @@ textarea.form-control.is-invalid{
 
 .max-w-5xl{
   max-width: 64rem;
-}
-
-.max-w-\[50\%\]{
-  max-width: 50%;
 }
 
 .max-w-\[90\%\]{
@@ -5634,6 +5587,10 @@ textarea.form-control.is-invalid{
 
 .max-w-\[85\%\]{
   max-width: 85%;
+}
+
+.max-w-\[50\%\]{
+  max-width: 50%;
 }
 
 .flex-shrink{
@@ -5983,20 +5940,16 @@ textarea.form-control.is-invalid{
   grid-template-columns: .5fr 1fr;
 }
 
-.grid-cols-2{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-3{
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .grid-cols-\[repeat\(3\2c _100px\)\]{
   grid-template-columns: repeat(3, 100px);
+}
+
+.grid-cols-\[repeat\(auto-fit\2c minmax\(250px\2c 1fr\)\)\]{
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
 }
 
 .flex-row{
@@ -6179,6 +6132,10 @@ textarea.form-control.is-invalid{
   gap: 1.25rem;
 }
 
+.gap-10{
+  gap: 2.5rem;
+}
+
 .gap-x-4{
   -moz-column-gap: 1rem;
        column-gap: 1rem;
@@ -6190,11 +6147,6 @@ textarea.form-control.is-invalid{
 
 .gap-y-8{
   row-gap: 2rem;
-}
-
-.gap-x-16{
-  -moz-column-gap: 4rem;
-       column-gap: 4rem;
 }
 
 .gap-x-2{
@@ -6614,11 +6566,6 @@ textarea.form-control.is-invalid{
   border-color: transparent;
 }
 
-.border-red-500{
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
-}
-
 .bg-gray-900\/90{
   background-color: rgb(17 24 39 / 0.9);
 }
@@ -6815,19 +6762,14 @@ textarea.form-control.is-invalid{
   padding-right: 1.5rem;
 }
 
-.py-4{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
-.py-1{
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+.py-2\.5{
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
 }
 
 .px-1\.5{
@@ -6840,11 +6782,6 @@ textarea.form-control.is-invalid{
   padding-right: 0.25rem;
 }
 
-.py-2\.5{
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-}
-
 .pt-6{
   padding-top: 1.5rem;
 }
@@ -6853,20 +6790,12 @@ textarea.form-control.is-invalid{
   padding-top: 1rem;
 }
 
-.pt-24{
-  padding-top: 6rem;
+.pt-10{
+  padding-top: 2.5rem;
 }
 
 .pb-8{
   padding-bottom: 2rem;
-}
-
-.pr-24{
-  padding-right: 6rem;
-}
-
-.pt-10{
-  padding-top: 2.5rem;
 }
 
 .pb-1{
@@ -7304,6 +7233,12 @@ textarea.form-control.is-invalid{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-md{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow{
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -7314,12 +7249,6 @@ textarea.form-control.is-invalid{
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color) !important;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
-}
-
-.shadow-md{
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .outline-none{
@@ -7653,12 +7582,6 @@ a:hover{
   font-weight: 500;
 }
 
-.before\:text-rose-500::before{
-  content: var(--tw-content);
-  --tw-text-opacity: 1;
-  color: rgb(244 63 94 / var(--tw-text-opacity));
-}
-
 .before\:text-slate-400::before{
   content: var(--tw-content);
   --tw-text-opacity: 1;
@@ -7777,24 +7700,6 @@ a:hover{
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
-}
-
-.after\:py-1::after{
-  content: var(--tw-content);
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.after\:px-1\.5::after{
-  content: var(--tw-content);
-  padding-left: 0.375rem;
-  padding-right: 0.375rem;
-}
-
-.after\:px-1::after{
-  content: var(--tw-content);
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
 }
 
 .after\:text-white::after{
@@ -7942,6 +7847,10 @@ a:hover{
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:bg-white\/5{
+  background-color: rgb(255 255 255 / 0.05);
+}
+
 .dark .dark\:text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -8034,10 +7943,6 @@ a:hover{
 
   .md\:col-span-1{
     grid-column: span 1 / span 1;
-  }
-
-  .md\:mt-0{
-    margin-top: 0px;
   }
 
   .md\:hidden{
@@ -8199,6 +8104,54 @@ a:hover{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.\[\&\>div\]\:p-10>div{
+  padding: 2.5rem;
+}
+
+.\[\&\>div\]\:text-xs>div{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.\[\&\>div\]\:font-light>div{
+  font-weight: 300;
+}
+
+.\[\&\>div\]\:hover\:bg-rose-500:hover>div{
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 63 94 / var(--tw-bg-opacity));
+}
+
 .dark .\[\&\>div\]\:dark\:bg-white\/10>div{
   background-color: rgb(255 255 255 / 0.1);
+}
+
+.dark .\[\&\>div\]\:dark\:bg-white\/5>div{
+  background-color: rgb(255 255 255 / 0.05);
+}
+
+.\[\&\>div\>h2\]\:mb-3\.5>div>h2{
+  margin-bottom: 0.875rem;
+}
+
+.\[\&\>div\>h2\]\:text-xl>div>h2{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.\[\&\>div\>h2\]\:font-medium>div>h2{
+  font-weight: 500;
+}
+
+.\[\&\>div\>a\]\:mt-5>div>a{
+  margin-top: 1.25rem;
+}
+
+.\[\&\>div\>a\]\:inline-block>div>a{
+  display: inline-block;
+}
+
+.\[\&\>div\>a\]\:text-xs>div>a{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
