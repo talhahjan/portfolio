@@ -6,6 +6,15 @@ module.exports = {
   ],
   darkMode: "class", // or media & false
   theme: {
+    fontSize: {
+      xs: ["10px", "14px"],
+      sm: ["12px", "16px"],
+      base: ["14px", "20px"],
+      lg: ["18px", "24px"],
+      xl: ["22px", "28px"],
+      "2xl": ["26px", "32px"],
+      "3xl": ["30px", "36px"],
+    },
     extend: {
       animation: {
         fillBars: "fillBars 10s ease-in-out",
