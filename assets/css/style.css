@@ -6183,11 +6183,6 @@ textarea.form-control.is-invalid{
   row-gap: 0.5rem;
 }
 
-.gap-x-4{
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-}
-
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -6475,10 +6470,6 @@ textarea.form-control.is-invalid{
 
 .rounded-full{
   border-radius: 9999px;
-}
-
-.rounded-xl{
-  border-radius: 0.75rem;
 }
 
 .rounded-3xl{
@@ -7508,7 +7499,7 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(30 41 59 / var(--tw-text-opacity));
+  color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
 .dark body{
@@ -7567,6 +7558,12 @@ body {
   line-height: 16px;
 }
 
+.before\:text-base::before{
+  content: var(--tw-content);
+  font-size: 14px;
+  line-height: 20px;
+}
+
 .before\:font-medium::before{
   content: var(--tw-content);
   font-weight: 500;
@@ -7576,6 +7573,24 @@ body {
   content: var(--tw-content);
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
+}
+
+.before\:text-slate-600::before{
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity));
+}
+
+.before\:text-slate-700::before{
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+
+.before\:text-slate-800::before{
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
 }
 
 .before\:content-\[attr\(data-heading\)\]::before{
@@ -7852,6 +7867,36 @@ body {
 .dark .dark\:text-rose-500{
   --tw-text-opacity: 1;
   color: rgb(244 63 94 / var(--tw-text-opacity));
+}
+
+.dark .dark\:before\:text-slate-100::before{
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity));
+}
+
+.dark .dark\:before\:text-slate-900::before{
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+
+.dark .dark\:before\:text-slate-700::before{
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+
+.dark .dark\:before\:text-slate-800::before{
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
+}
+
+.dark .dark\:before\:text-slate-200::before{
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity));
 }
 
 .dark .dark\:hover\:bg-gray-500\/50:hover{
