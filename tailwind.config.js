@@ -18,6 +18,7 @@ module.exports = {
     extend: {
       animation: {
         fillBars: "fillBars 10s ease-in-out",
+        animateText: "typingText 4s steps(12) infinite",
       },
       padding: {
         "1/3": "33.333333%",

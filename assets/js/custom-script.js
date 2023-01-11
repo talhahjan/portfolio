@@ -9,7 +9,24 @@ const navBar = document.querySelector("header nav"),
   darkModeQuery = matchMedia("(prefers-color-scheme: dark)"),
   skillsContent = document.getElementsByClassName("skill_content"),
   skillHeader = document.querySelectorAll(".skill_header"),
-  navLinks = document.querySelectorAll("#nav-menu li a");
+  navLinks = document.querySelectorAll("#nav-menu li a"),
+  animatedText = document.getElementById("animated-text"),
+  textList = document.querySelectorAll("#animated-text-list li");
+
+const animateText = () => {
+  setTimeout(() => {
+    animatedText.textContent = "web devloper";
+  }, 0);
+
+  setTimeout(() => {
+    animatedText.textContent = "blogger";
+  }, 5000);
+
+  setTimeout(() => {
+    animatedText.textContent = "freelancer";
+  }, 10000);
+  setInterval(animateText, 15000);
+};
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
@@ -75,10 +92,10 @@ const onWindowLoad = () => {
     saveTheme(theme);
   }
 };
-
 //  if clicked on page  check out if any dropdown remains open
 // close it dynamically
 
 window.onload = (e) => {
   onWindowLoad();
+  animateText();
 };
