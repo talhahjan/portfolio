@@ -8,16 +8,20 @@ const navBar = document.querySelector("header nav"),
   //check if darkMode is active in user system
   darkModeQuery = matchMedia("(prefers-color-scheme: dark)"),
   skillsContent = document.getElementsByClassName("skill_content"),
-  skillHeader = document.querySelectorAll(".skill_header");
+  skillHeader = document.querySelectorAll(".skill_header"),
+  navLinks = document.querySelectorAll(".nav-link");
+console.log(navLinks);
 
-const toggleSkills = (e) => {
-  let itemClass = document.parentNode.className;
-  for (i = 0; i < skillsContent.length; i++) {
-    skillsContent[i].className = "s";
-  }
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    toggleNavbar();
+  });
+});
+
+const toggleNavbar = () => {
+  navMenu.classList.toggle("-left-full");
+  navMenu.classList.toggle("left-0");
 };
-
-skillHeader.forEach((el) => {});
 
 window.addEventListener("scroll", () => {
   navBar.classList.toggle("navbar-fixed", window.scrollY > 0);
@@ -30,8 +34,7 @@ themes.forEach((theme) => {
 });
 
 NavBarToggler.addEventListener("click", () => {
-  navMenu.classList.toggle("-left-full");
-  navMenu.classList.toggle("left-0");
+  toggleNavbar();
 });
 
 const saveTheme = (theme) => {
