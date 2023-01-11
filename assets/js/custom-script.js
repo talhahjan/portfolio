@@ -9,8 +9,7 @@ const navBar = document.querySelector("header nav"),
   darkModeQuery = matchMedia("(prefers-color-scheme: dark)"),
   skillsContent = document.getElementsByClassName("skill_content"),
   skillHeader = document.querySelectorAll(".skill_header"),
-  navLinks = document.querySelectorAll(".nav-link");
-console.log(navLinks);
+  navLinks = document.querySelectorAll("#nav-menu li a");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
