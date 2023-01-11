@@ -5366,14 +5366,14 @@ textarea.form-control.is-invalid{
   margin-bottom: 0.5rem;
 }
 
-.mx-4{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .mx-96{
   margin-left: 24rem;
   margin-right: 24rem;
+}
+
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .mb-1{
@@ -5408,12 +5408,12 @@ textarea.form-control.is-invalid{
   margin-top: 1.25rem;
 }
 
-.-mt-4{
-  margin-top: -1rem;
-}
-
 .mt-2{
   margin-top: 0.5rem;
+}
+
+.-mt-4{
+  margin-top: -1rem;
 }
 
 .box-border{
@@ -5570,6 +5570,19 @@ textarea.form-control.is-invalid{
 
 .w-60{
   width: 15rem;
+}
+
+.w-40{
+  width: 10rem;
+}
+
+.w-min{
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.w-52{
+  width: 13rem;
 }
 
 .max-w-5xl{
@@ -6603,10 +6616,6 @@ textarea.form-control.is-invalid{
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
-.bg-transparent{
-  background-color: transparent;
-}
-
 .bg-blue-600{
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
@@ -6615,6 +6624,10 @@ textarea.form-control.is-invalid{
 .bg-\[rgb\(255\2c 0\2c 0\)\]{
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-transparent{
+  background-color: transparent;
 }
 
 .bg-gradient-to-r{
@@ -7585,11 +7598,6 @@ body {
   animation: typingText 4s steps(12) infinite;
 }
 
-.before\:border-l-2::before{
-  content: var(--tw-content);
-  border-left-width: 2px;
-}
-
 .before\:border-l-4::before{
   content: var(--tw-content);
   border-left-width: 4px;
@@ -7601,39 +7609,22 @@ body {
   border-color: rgb(244 63 94 / var(--tw-border-opacity));
 }
 
-.before\:bg-red-500::before{
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
-.before\:bg-inherit::before{
-  content: var(--tw-content);
-  background-color: inherit;
-}
-
 .before\:bg-\[\#eee\]::before{
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(238 238 238 / var(--tw-bg-opacity));
 }
 
-.before\:text-base::before{
-  content: var(--tw-content);
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.before\:text-lg::before{
-  content: var(--tw-content);
-  font-size: 18px;
-  line-height: 24px;
-}
-
 .before\:text-xl::before{
   content: var(--tw-content);
   font-size: 22px;
   line-height: 28px;
+}
+
+.before\:text-base::before{
+  content: var(--tw-content);
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .before\:font-medium::before{
@@ -7762,14 +7753,14 @@ body {
   background-color: transparent;
 }
 
-.hover\:bg-rose-500:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 63 94 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-blue-700:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-rose-500:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 63 94 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gradient-to-tr:hover{
@@ -7931,16 +7922,6 @@ body {
 .dark .dark\:text-slate-300{
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity));
-}
-
-.dark .before\:dark\:bg-white\/5::before{
-  content: var(--tw-content);
-  background-color: rgb(255 255 255 / 0.05);
-}
-
-.dark .dark\:before\:bg-inherit::before{
-  content: var(--tw-content);
-  background-color: inherit;
 }
 
 .dark .dark\:before\:bg-slate-900::before{
@@ -8247,31 +8228,4 @@ body {
 .\[\&\>div\>a\]\:text-sm>div>a{
   font-size: 12px;
   line-height: 16px;
-}
-
-.\[\&\:before\]\:text-lg:before{
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.\[\&\:before\]\:capitalize:before{
-  text-transform: capitalize;
-}
-
-.\[\&\>before\]\:text-lg>before{
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.\[\&\>before\]\:capitalize>before{
-  text-transform: capitalize;
-}
-
-.\[\&_\:before\]\:text-lg :before{
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.\[\&_\:before\]\:capitalize :before{
-  text-transform: capitalize;
 }

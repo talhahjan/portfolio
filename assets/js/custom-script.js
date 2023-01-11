@@ -7,8 +7,6 @@ const navBar = document.querySelector("header nav"),
   defaultMode = "dark", // string : 'dark' , 'light' or 'system'
   //check if darkMode is active in user system
   darkModeQuery = matchMedia("(prefers-color-scheme: dark)"),
-  skillsContent = document.getElementsByClassName("skill_content"),
-  skillHeader = document.querySelectorAll(".skill_header"),
   navLinks = document.querySelectorAll("#nav-menu li a"),
   animatedText = document.getElementById("animated-text"),
   textList = document.querySelectorAll("#animated-text-list li");
@@ -92,6 +90,14 @@ const onWindowLoad = () => {
     saveTheme(theme);
   }
 };
+
+const skillSection = document.querySelector("section #skills");
+
+const skillObserver = new IntersectionObserver(() => {}, {
+  root: null,
+  threshhold: 0,
+});
+
 //  if clicked on page  check out if any dropdown remains open
 // close it dynamically
 
