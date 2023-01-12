@@ -9,7 +9,10 @@ const navBar = document.querySelector("header nav"),
   darkModeQuery = matchMedia("(prefers-color-scheme: dark)"),
   navLinks = document.querySelectorAll("#nav-menu li a"),
   animatedText = document.getElementById("animated-text"),
-  textList = document.querySelectorAll("#animated-text-list li");
+  textList = document.querySelectorAll("#animated-text-list li"),
+  backendSkills = document.getElementById("skill-list-backend"),
+  frontendSkills = document.getElementById("skill-list-frontend"),
+  speed = 5;
 
 const animateText = () => {
   setTimeout(() => {
@@ -91,11 +94,44 @@ const onWindowLoad = () => {
   }
 };
 
-const skillSection = document.querySelector("section #skills");
+const backendSkillsList = backendSkills.querySelectorAll(".skill-per");
 
-const skillObserver = new IntersectionObserver(() => {}, {
-  root: null,
-  threshhold: 0,
+backendSkillsList.forEach((value) => {
+  const updateSkills = () => {
+    const targetNum = value.dataset.per;
+    const initialNumber = parseInt(value.innerText);
+    const incrementNum = Math.trunc(targetNum / speed);
+    const percentageWidth =
+      value.parentElement.nextElementSibling.querySelector(".skill-per-bar");
+    if (initialNumber < targetNum) {
+      let percent = initialNumber + incrementNum;
+      value.innerText = `${percent}%`;
+      percentageWidth.classList.remove("max-w-0");
+      percentageWidth.style.width = `${percent}%`;
+      setTimeout(updateSkills, 20);
+    }
+  };
+  updateSkills();
+});
+
+const frontendSkillsList = frontendSkills.querySelectorAll(".skill-per");
+
+frontendSkillsList.forEach((value) => {
+  const updateSkills = () => {
+    const targetNum = value.dataset.per;
+    const initialNumber = parseInt(value.innerText);
+    const incrementNum = Math.trunc(targetNum / speed);
+    const percentageWidth =
+      value.parentElement.nextElementSibling.querySelector(".skill-per-bar");
+    if (initialNumber < targetNum) {
+      let percent = initialNumber + incrementNum;
+      value.innerText = `${percent}%`;
+      percentageWidth.classList.remove("max-w-0");
+      percentageWidth.style.width = `${percent}%`;
+      setTimeout(updateSkills, 20);
+    }
+  };
+  updateSkills();
 });
 
 //  if clicked on page  check out if any dropdown remains open
