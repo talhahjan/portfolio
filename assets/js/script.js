@@ -12,7 +12,7 @@ const navBar = document.querySelector("header nav"),
   textList = document.querySelectorAll("#animated-text-list li"),
   backendSkills = document.getElementById("skill-list-backend"),
   frontendSkills = document.getElementById("skill-list-frontend"),
-  speed = 5;
+  speed = 50;
 
 const animateText = () => {
   setTimeout(() => {
