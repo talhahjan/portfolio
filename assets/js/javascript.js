@@ -48,7 +48,7 @@ const toggleNavbar = () => {
 
 window.addEventListener("scroll", () => {
   navBar.classList.toggle("navbar-fixed", window.scrollY > 0);
-  goToTopBtn.classList.toggle("hidden", window.scrollY < 150);
+  goToTopBtn.classList.toggle("hidden", window.scrollY < 100);
 });
 
 themes.forEach((theme) => {
