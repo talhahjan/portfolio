@@ -12,7 +12,17 @@ const navBar = document.querySelector("header nav"),
   textList = document.querySelectorAll("#animated-text-list li"),
   backendSkills = document.getElementById("skill-list-backend"),
   frontendSkills = document.getElementById("skill-list-frontend"),
+  goToTopBtn = document.getElementById("goToTopBtn"),
   speed = 60;
+
+goToTopBtn.addEventListener(
+  "click",
+  () => (document.documentElement.scrollTop = 0)
+);
+
+window.addEventListener("scroll", () => {
+  goToTopBtn.classList.toggle("hidden", window.scrollY < 100);
+});
 
 const animateText = () => {
   setTimeout(() => {
