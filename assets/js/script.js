@@ -108,7 +108,7 @@ backendSkillsList.forEach((value) => {
       value.innerText = `${percent}%`;
       percentageWidth.classList.remove("max-w-0");
       percentageWidth.style.width = `${percent}%`;
-      setTimeout(updateSkills, 20);
+      setTimeout(updateSkills, 60);
     }
   };
   updateSkills();
@@ -128,7 +128,7 @@ frontendSkillsList.forEach((value) => {
       value.innerText = `${percent}%`;
       percentageWidth.classList.remove("max-w-0");
       percentageWidth.style.width = `${percent}%`;
-      setTimeout(updateSkills, 20);
+      setTimeout(updateSkills, 60);
     }
   };
   updateSkills();
