@@ -14,16 +14,10 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  background-color: #eee;
 }
 body {
-  @apply dark:bg-slate-900 text-slate-600 dark:text-slate-400;
-  /* @apply bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-50; */
+  @apply bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-50;
 }
-
-/* a {
-  @apply text-black hover:text-slate-500 dark:text-slate-400 dark:hover:text-slate-100 duration-300;
-} */
 
 @keyframes typingText {
   40%,

@@ -20,10 +20,6 @@ goToTopBtn.addEventListener(
   () => (document.documentElement.scrollTop = 0)
 );
 
-window.addEventListener("scroll", () => {
-  goToTopBtn.classList.toggle("hidden", window.scrollY < 100);
-});
-
 const animateText = () => {
   setTimeout(() => {
     animatedText.textContent = "web devloper";
@@ -52,6 +48,7 @@ const toggleNavbar = () => {
 
 window.addEventListener("scroll", () => {
   navBar.classList.toggle("navbar-fixed", window.scrollY > 0);
+  goToTopBtn.classList.toggle("hidden", window.scrollY < 150);
 });
 
 themes.forEach((theme) => {
