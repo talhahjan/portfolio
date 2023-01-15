@@ -3,6 +3,128 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-text-dark-base: rgb(248, 250, 252);
+    --color-text-dark-base-alt: rgb(209, 213, 219);
+    --body-bg-dark: 15, 23, 42;
+    /*
+   above variables are for dark mode only, remember dark mode is in 
+   its self a theme,
+   dark mode variables should not be over-writen by any theme
+   although these following variables can be over-written in theme ,in order to create 
+   theme define css class staring with theme- (i,e theme-aqua, theme-indigo)
+   themes are automatically will be populated in theme menu dropdown,
+   by using javascript's  querySelector
+   */
+    --color-text-base: rgb(17, 24, 39);
+    --color-text-base-alt: rgb(100, 116, 139);
+    --color-text-primary: rgb(var(--fill-primary));
+    --color-text-muted: rgb(255, 228, 230);
+    --color-text-inverted: rgb(255, 255, 255);
+    --fill-primary: 244, 63, 94;
+    --fill-primary-alt: 190, 18, 60;
+    --body-bg: 238, 238, 238;
+  }
+}
+
+.theme-red {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(250, 232, 255);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 217, 70, 239;
+  --fill-primary-alt: 192, 38, 211;
+}
+
+.theme-cyan {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(207, 250, 254);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 6, 182, 212;
+  --fill-primary-alt: 8, 145, 178;
+}
+
+.theme-teal {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(204, 251, 241);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 20, 184, 166;
+  --fill-primary-alt: 13, 148, 136;
+}
+
+.theme-indigo {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(224, 231, 255);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 99, 102, 241;
+  --fill-primary-alt: 79, 70, 229;
+}
+
+.theme-purple {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(243, 232, 255);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 168, 85, 247;
+  --fill-primary-alt: 147, 51, 234;
+}
+
+.theme-red {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(254, 226, 226);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 239, 68, 68;
+  --fill-primary-alt: 220, 38, 38;
+}
+
+.theme-pink {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(252, 231, 243);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 236, 72, 153;
+  --fill-primary-alt: 219, 39, 119;
+}
+
+.theme-emerald {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(209, 250, 229);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 16, 185, 129;
+  --fill-primary-alt: 5, 150, 105;
+}
+
+.theme-red {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(250, 232, 255);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 217, 70, 239;
+  --fill-primary-alt: 192, 38, 211;
+}
+
+.theme-orange {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(250, 232, 255);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 217, 70, 239;
+  --fill-primary-alt: 192, 38, 211;
+}
+
+.theme-stone {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(rgba(245, 245, 244, 1));
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 120, 113, 108;
+  --fill-primary-alt: 87, 83, 78;
+}
+
+.theme-fuchsia {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(250, 232, 255);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 217, 70, 239;
+  --fill-primary-alt: 192, 38, 211;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -15,8 +137,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
 }
+
 body {
-  @apply bg-gray-100 dark:bg-slate-900 text-slate-900 dark:text-slate-50;
+  @apply bg-body dark:bg-body-dark text-color-base dark:text-color-base-dark;
 }
 
 @keyframes typingText {

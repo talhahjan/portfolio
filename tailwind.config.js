@@ -1,3 +1,12 @@
+const withOpacity = (variableName) => {
+  return ({ opacityValue }) => {
+    if (opacityValue == undefined) {
+      return `rgb(var(${variableName}))`;
+    }
+    return `rgba(var(${variableName}), ${opacityValue})`;
+  };
+};
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -17,8 +26,37 @@ module.exports = {
       "3xl": ["34px", "40px"],
     },
     extend: {
+      borderColor: {
+        primary: withOpacity("--fill-primary"),
+      },
+
+      boxShadowColor: {
+        primary: withOpacity("--fill-primary"),
+      },
+
+      textColor: {
+        "color-base": "var(--color-text-base)",
+        "color-base-alt": "var(--color-text-base-alt)",
+        "color-base-dark": "var(--color-text-dark-base)",
+        "color-base-dark-alt": "var(--color-text-dark-base-alt)",
+        primary: "var(--color-text-primary)",
+        muted: "var(--color-text-muted)",
+        inverted: "var(--color-text-inverted)",
+      },
+
+      backgroundColor: {
+        "body-dark": withOpacity("--body-bg-dark"),
+        primary: withOpacity("--fill-primary"),
+        "primary-alt": withOpacity("--fill-primary-alt"),
+        body: withOpacity("--body-bg"),
+      },
+
+      gradientColorStops: {
+        primary: "rgb(var(--fill-primary))",
+        "primary-alt": "rgb(var(--fill-primary-alt))",
+      },
+
       animation: {
-        fillBars: "fillBars 10s ease-in-out",
         animateText: "typingText 4s steps(12) infinite",
       },
       padding: {

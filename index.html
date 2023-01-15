@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="assets/css/tailwind.css" />
     <title>Khalid Dashti :: Personel Portfolio</title>
   </head>
-  <body>
+  <body class="theme-cyan">
     <button
-      class="fixed bottom-5 right-7 z-50 bg-rose-500 shadow-md hover:shadow-rose-700 cursor-pointer text-white w-8 h-8 rounded-md"
+      class="fixed bottom-5 right-7 z-50 bg-primary shadow-md hover:shadow-primary/50 cursor-pointer text-inverted w-8 h-8 rounded-md"
       id="goToTopBtn"
     >
       <svg
@@ -31,13 +31,15 @@
       <header>
         <!-- ============== navbar start  ============== -->
         <nav
-          class="nav fixed top-0 w-full max-w-5xl font-Courgette z-50 px-4 backdrop-blur transition-colors duration-500 dark:text-white"
+          class="nav fixed top-0 w-full max-w-5xl font-Courgette z-50 px-4 backdrop-blur transition-colors duration-50"
         >
           <div
             class="nav-wrapper flex justify-between items-center h-12 leading-12"
           >
             <div class="toggle md:hidden" id="toggler">
-              <button class="hover:text-slate-500 duration-300">
+              <button
+                class="hover:text-color-base-alt dark:hover:text-color-base-dark-alt duration-300"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -50,18 +52,18 @@
               </button>
             </div>
             <div
-              class="brand font-semibold text-slate-600 dark:text-white select-none"
+              class="brand font-semibold select-none text-base-alt dark:text-color-base-dark-alt"
             >
-              Khalid Dashti
+              K D.
             </div>
             <ul
-              class="absolute -left-full top-14 bg-gray-900/90 md:bg-inherit duration-300 md:transition-none h-screen w-[70vw] md:h-full md:w-auto md:static flex flex-col md:flex-row items-start md:justify-center md:items-center gap-2 z-100 capitalize"
+              class="absolute -left-full top-14 bg-gray-900/90 md:bg-inherit duration-300 md:transition-none h-screen w-[70vw] md:h-full md:w-auto md:static flex flex-col md:flex-row items-start md:justify-center md:items-center gap-2 z-100 capitalize pt-5 md:pt-0"
               id="nav-menu"
             >
               <li class="w-full px-5 md:px-0 md:w-auto">
                 <a
                   href="#home"
-                  class="flex p-2 items-center gap-4 w-full hover:bg-slate-400/10 md:hover:bg-inherit rounded-md border border-transparent hover:border-slate-600/10 md:border-none relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-rose-500 text-white md:text-inherit hover:text-slate-200 md:hover:text-inherit"
+                  class="flex p-2 items-center gap-4 w-full text-inverted hover:text-inverted md:text-inherit md:hover:text-color-base-alt dark:md:hover:text-color-base-dark-alt hover:bg-gradient-to-tl from-primary to-primary-alt md:hover:bg-none rounded-md relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-primary hover:shadow-primary/50 shadow-md md:shadow-none"
                 >
                   <span class="md:hidden inline-block">
                     <svg
@@ -83,7 +85,7 @@
               <li class="w-full px-5 md:px-0 md:w-auto">
                 <a
                   href="#about"
-                  class="flex p-2 items-center gap-4 w-full hover:bg-slate-400/10 md:hover:bg-inherit rounded-md border border-transparent hover:border-slate-600/10 md:border-none relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-rose-500 text-white md:text-inherit hover:text-slate-200 md:hover:text-inherit"
+                  class="flex p-2 items-center gap-4 w-full text-inverted hover:text-inverted md:text-inherit md:hover:text-color-base-alt dark:md:hover:text-color-base-dark-alt hover:bg-gradient-to-tl from-primary to-primary-alt md:hover:bg-none rounded-md relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-primary hover:shadow-primary/50 shadow-md md:shadow-none"
                 >
                   <span class="md:hidden inline-block">
                     <svg
@@ -105,7 +107,7 @@
               <li class="w-full px-5 md:px-0 md:w-auto">
                 <a
                   href="#skills"
-                  class="flex p-2 items-center gap-4 w-full hover:bg-slate-400/10 md:hover:bg-inherit rounded-md border border-transparent hover:border-slate-600/10 md:border-none relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-rose-500 text-white md:text-inherit hover:text-slate-200 md:hover:text-inherit"
+                  class="flex p-2 items-center gap-4 w-full text-inverted hover:text-inverted md:text-inherit md:hover:text-color-base-alt dark:md:hover:text-color-base-dark-alt hover:bg-gradient-to-tl from-primary to-primary-alt md:hover:bg-none rounded-md relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-primary hover:shadow-primary/50 shadow-md md:shadow-none"
                 >
                   <span class="md:hidden inline-block">
                     <svg
@@ -130,7 +132,7 @@
               <li class="w-full px-5 md:px-0 md:w-auto">
                 <a
                   href="#services"
-                  class="flex p-2 items-center gap-4 w-full hover:bg-slate-400/10 md:hover:bg-inherit rounded-md border border-transparent hover:border-slate-600/10 md:border-none relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-rose-500 text-white md:text-inherit hover:text-slate-200 md:hover:text-inherit"
+                  class="flex p-2 items-center gap-4 w-full text-inverted hover:text-inverted md:text-inherit md:hover:text-color-base-alt dark:md:hover:text-color-base-dark-alt hover:bg-gradient-to-tl from-primary to-primary-alt md:hover:bg-none rounded-md relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-primary hover:shadow-primary/50 shadow-md md:shadow-none"
                 >
                   <span class="md:hidden inline-block">
                     <svg
@@ -153,7 +155,7 @@
               <li class="w-full px-5 md:px-0 md:w-auto">
                 <a
                   href="#portfolio"
-                  class="flex p-2 items-center gap-4 w-full hover:bg-slate-400/10 md:hover:bg-inherit rounded-md border border-transparent hover:border-slate-600/10 md:border-none relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-rose-500 text-white md:text-inherit hover:text-slate-200 md:hover:text-inherit"
+                  class="flex p-2 items-center gap-4 w-full text-inverted hover:text-inverted md:text-inherit md:hover:text-color-base-alt dark:md:hover:text-color-base-dark-alt hover:bg-gradient-to-tl from-primary to-primary-alt md:hover:bg-none rounded-md relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-primary hover:shadow-primary/50 shadow-md md:shadow-none"
                 >
                   <span class="md:hidden inline-block">
                     <svg
@@ -177,7 +179,7 @@
               <li class="w-full px-5 md:px-0 md:w-auto">
                 <a
                   href="#contact-me"
-                  class="flex p-2 items-center gap-4 w-full hover:bg-slate-400/10 md:hover:bg-inherit rounded-md border border-transparent hover:border-slate-600/10 md:border-none relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-rose-500 text-white md:text-inherit hover:text-slate-200 md:hover:text-inherit"
+                  class="flex p-2 items-center gap-4 w-full text-inverted hover:text-inverted md:text-inherit md:hover:text-color-base-alt dark:md:hover:text-color-base-dark-alt hover:bg-gradient-to-tl from-primary to-primary-alt md:hover:bg-none rounded-md relative md:after:absolute md:after:left-2/5 md:after:right-2/4 md:after:bottom-1 md:after:h-0.5 md:after:w-0 md:after:hover:w-2/4 md:after:focus:w-2/4 md:after:duration-500 md:after:translate-x-2/4 md:after:translate-y-2/4 md:after:bg-primary hover:shadow-primary/50 shadow-md md:shadow-none"
                 >
                   <span class="md:hidden inline-block">
                     <svg
@@ -201,7 +203,7 @@
             <div class="grid grid-flow-col gap-2">
               <div class="relative w-5 h-full dropdown">
                 <button
-                  class="dropdown-toggle hover:text-slate-500 duration-300 link"
+                  class="dropdown-toggle hover:text-color-base-alt dark:hover:text-color-base-dark-alt duration-300 link"
                   type="button"
                   id="themeIcon"
                   data-bs-toggle="dropdown"
@@ -235,7 +237,7 @@
                       />
                       <label
                         for="dark"
-                        class="flex items-center gap-2 w-full py-2 px-4 duration-300 text-sm font-normal whitespace-nowrap cursor-pointer text-slate-800 dark:text-slate-100 hover:bg-slate-800/20 dark:hover:bg-gray-500/50 peer-checked:bg-rose-500/80 peer-checked:text-slate-100"
+                        class="flex items-center gap-2 w-full py-2 px-4 duration-300 text-sm font-normal whitespace-nowrap cursor-pointer hover:bg-slate-800/20 dark:hover:bg-gray-500/50 peer-checked:bg-primary peer-checked:text-inverted"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -268,17 +270,17 @@
                       />
                       <label
                         for="light"
-                        class="flex items-center gap-2 w-full py-2 px-4 duration-300 text-sm font-normal whitespace-nowrap cursor-pointer text-slate-800 dark:text-slate-100 hover:bg-slate-800/20 dark:hover:bg-gray-500/50 peer-checked:bg-rose-500/80 peer-checked:text-slate-100"
-                        ><svg
+                        class="flex items-center gap-2 w-full py-2 px-4 duration-300 text-sm font-normal whitespace-nowrap cursor-pointer hover:bg-slate-800/20 dark:hover:bg-gray-500/50 peer-checked:bg-primary peer-checked:text-inverted"
+                      >
+                        <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width="16"
                           height="16"
+                          width="16"
+                          viewBox="0 0 48 48"
                           fill="currentColor"
-                          class="bi bi-sun-fill"
-                          viewBox="0 0 16 16"
                         >
                           <path
-                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                            d="M24 31q2.9 0 4.95-2.05Q31 26.9 31 24q0-2.9-2.05-4.95Q26.9 17 24 17q-2.9 0-4.95 2.05Q17 21.1 17 24q0 2.9 2.05 4.95Q21.1 31 24 31Zm0 3q-4.15 0-7.075-2.925T14 24q0-4.15 2.925-7.075T24 14q4.15 0 7.075 2.925T34 24q0 4.15-2.925 7.075T24 34ZM3.5 25.5q-.65 0-1.075-.425Q2 24.65 2 24q0-.65.425-1.075Q2.85 22.5 3.5 22.5h5q.65 0 1.075.425Q10 23.35 10 24q0 .65-.425 1.075-.425.425-1.075.425Zm36 0q-.65 0-1.075-.425Q38 24.65 38 24q0-.65.425-1.075.425-.425 1.075-.425h5q.65 0 1.075.425Q46 23.35 46 24q0 .65-.425 1.075-.425.425-1.075.425ZM24 10q-.65 0-1.075-.425Q22.5 9.15 22.5 8.5v-5q0-.65.425-1.075Q23.35 2 24 2q.65 0 1.075.425.425.425.425 1.075v5q0 .65-.425 1.075Q24.65 10 24 10Zm0 36q-.65 0-1.075-.425-.425-.425-.425-1.075v-5q0-.65.425-1.075Q23.35 38 24 38q.65 0 1.075.425.425.425.425 1.075v5q0 .65-.425 1.075Q24.65 46 24 46ZM12 14.1l-2.85-2.8q-.45-.45-.425-1.075.025-.625.425-1.075.45-.45 1.075-.45t1.075.45L14.1 12q.4.45.4 1.05 0 .6-.4 1-.4.45-1.025.45-.625 0-1.075-.4Zm24.7 24.75L33.9 36q-.4-.45-.4-1.075t.45-1.025q.4-.45 1-.45t1.05.45l2.85 2.8q.45.45.425 1.075-.025.625-.425 1.075-.45.45-1.075.45t-1.075-.45ZM33.9 14.1q-.45-.45-.45-1.05 0-.6.45-1.05l2.8-2.85q.45-.45 1.075-.425.625.025 1.075.425.45.45.45 1.075t-.45 1.075L36 14.1q-.4.4-1.025.4-.625 0-1.075-.4ZM9.15 38.85q-.45-.45-.45-1.075t.45-1.075L12 33.9q.45-.45 1.05-.45.6 0 1.05.45.45.45.45 1.05 0 .6-.45 1.05l-2.8 2.85q-.45.45-1.075.425-.625-.025-1.075-.425ZM24 24Z"
                           />
                         </svg>
                         Light</label
@@ -296,7 +298,7 @@
                       />
                       <label
                         for="system"
-                        class="flex items-center gap-2 w-full py-2 px-4 duration-300 dropdown-item text-sm font-normal whitespace-nowrap cursor-pointer text-slate-800 dark:text-slate-100 hover:bg-slate-800/20 dark:hover:bg-gray-500/50 peer-checked:bg-rose-500/80 peer-checked:text-slate-100"
+                        class="flex items-center gap-2 w-full py-2 px-4 duration-300 text-sm font-normal whitespace-nowrap cursor-pointer hover:bg-slate-800/20 dark:hover:bg-gray-500/50 peer-checked:bg-primary peer-checked:text-inverted"
                         data-dropdown-button
                         ><svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -332,7 +334,7 @@
             <div
               class="grid gap-y-8 text-xl absolute top-0 left-0 translate-y-1/2 md:translate-y-0 md:static"
             >
-              <button class="text-rose-500 hover:text-rose-700">
+              <button class="text-primary hover:text-primary-alt">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -346,7 +348,7 @@
                   />
                 </svg>
               </button>
-              <button class="text-rose-500 hover:text-rose-700">
+              <button class="text-primary hover:text-primary-alt">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -361,7 +363,7 @@
                 </svg>
               </button>
               <button
-                class="home_social-icon text-rose-500 hover:text-rose-700"
+                class="home_social-icon text-primary hover:text-primary-alt"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -381,7 +383,7 @@
               class="justify-self-center md:justify-self-end md:order-3 md:pr-10"
             >
               <div
-                class="w-48 h-48 relative after:absolute after:top-0 after:left-0 after:w-[calc(100%_+_10px)] after:h-[calc(100%_+_5px)] after:bg-gradient-to-tr after:from-transparent after:via-rose-600 after:to-rose-600 after:shadow after:rounded-[33%_67%_50%_50%_/50%_14%_86%_50%] after:-z-50"
+                class="w-48 h-48 relative after:absolute after:top-0 after:left-0 after:w-[calc(100%_+_10px)] after:h-[calc(100%_+_5px)] after:bg-gradient-to-tr after:from-transparent after:via-primary after:to-primary-alt after:shadow after:rounded-[33%_67%_50%_50%_/50%_14%_86%_50%] after:-z-50"
               >
                 <img
                   src="assets/images/me.jpg"
@@ -391,20 +393,21 @@
               </div>
             </div>
             <div class="md:order-2 pt-4 md:pt-0 md:ml-10">
-              <h1 class="text-lg sm:text-md md:text-2xl font-bold">
+              <h1 class="text-md sm:text-base md:text-xl font-bold">
                 Hi, my name is
-                <span class="text-rose-500 font-Courgette ml-1"
+                <span class="text-primary font-Courgette ml-1"
                   >Khalid Dashti</span
                 >
               </h1>
               <h2
-                class="text-lg sm:text-xl mb-1 font-semibold [&>span]:relative [&>span]:leading-normal"
+                class="text-md sm:text-lg md:text-xl mb-1 font-semibold [&>span]:relative [&>span]:leading-normal"
               >
                 I'am a
                 <span
-                  class="text-rose-500 font-Courgette before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-gray-100 dark:before:bg-slate-900 before:border-l-2 before:border-rose-500 before:animate-animateText capitalize text-lg sm:text-md md:text-2xl ml-1"
+                  class="text-primary font-Courgette before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-body dark:before:bg-body-dark before:border-l-2 before:border-primary before:animate-animateText capitalize text-md sm:text-lg md:text-xl ml-1"
                   id="animated-text"
-                ></span>
+                  >web devloper</span
+                >
               </h2>
               <p class="mb-4">
                 High level experience in web design and development knowledge,
@@ -412,7 +415,7 @@
               </p>
               <a
                 href="#contact-me"
-                class="bg-rose-500 text-white border-2 border-transparent font-bold py-1 px-6 items-center inline-flex gap-x-2 rounded-lg duration-300 hover:bg-transparent hover:border-rose-500 hover:text-rose-500 dark:hover:text-inherit text-base my-2 capitalize shadow-lg focus:shadow-rose-700"
+                class="bg-primary text-inverted border-2 border-transparent font-bold py-1 px-6 items-center inline-flex gap-x-2 rounded-lg duration-300 hover:bg-transparent hover:border-primary hover:text-primary text-base my-2 capitalize dark:text-color-base-dark shadow-md hover:shadow-primary/50"
               >
                 Contact Me
                 <svg
@@ -435,7 +438,7 @@
         <section id="about" class="section pt-14 pb-8 px-3">
           <h2
             data-heading="My Intro"
-            class="before:content-[attr(data-heading)] before:block before:font-medium before:text-base before:text-slate-700 dark:before:text-slate-200 section_title text-center text-2xl mb-12 font-bold font-Courgette text-rose-500 dark:text-rose-500"
+            class="before:content-[attr(data-heading)] before:block before:font-medium before:text-base before:text-color-base-alt dark:before:text-color-base-dark-alt section_title text-center text-xl mb-12 font-bold font-Courgette text-primary"
           >
             About Me
           </h2>
@@ -443,7 +446,7 @@
             class="about_container grid justify-center items-start grid-cols-1 md:grid-cols-[max-content,1fr] gap-x-[5%] gap-y-4"
           >
             <div
-              class="about_me w-60 aspect-w-6 aspect-h-2 md:aspect-h-6 justify-self-center rounded-3xl bg-gradient-to-r from-transparent via-rose-500 to-transparent grid place-items-center shadow-xl"
+              class="about_me w-60 aspect-w-6 aspect-h-2 md:aspect-h-6 justify-self-center rounded-3xl bg-gradient-to-r from-primary to-primary-alt grid place-items-center shadow-xl"
             >
               <div
                 class="about_me-image overflow-hidden shadow-xl rounded-lg rotate-[10deg] hover:rotate-0"
@@ -453,21 +456,23 @@
             </div>
 
             <div class="about_content flex flex-col gap-y-1 justify-center">
-              <h3 class="about-heading text-xl pb-1 font-semibold leading-snug">
+              <h3
+                class="about-heading text-xl pb-1 font-semibold leading-snug text-color-base-alt dark:text-color-base-dark-alt"
+              >
                 I'am Khalid Dashti
               </h3>
               <h4 class="about-subheading text-lg pb-1">
                 A Lead
-                <span class="text-rose-500 font-semibold">Web Devloper </span
+                <span class="text-primary font-semibold">Web Devloper </span
                 >based in
-                <span class="text-rose-500 font-semibold">Karachi</span>
+                <span class="text-primary font-semibold">Karachi</span>
               </h4>
               <p class="about_description">
                 web devlopment with extensive knowledg and years of experience,
                 in both backend-devlopment as we as frontend-devlopment
               </p>
               <button
-                class="bg-rose-500 text-white border-2 border-transparent font-bold py-1 px-6 items-center inline-flex gap-x-2 rounded-lg duration-500 hover:bg-transparent hover:border-rose-500 hover:text-rose-500 dark:hover:text-inherit text-base w-48 my-2 capitalize shadow-lg focus:shadow-rose-700"
+                class="bg-primary text-inverted border-2 border-transparent font-bold py-1 px-6 items-center inline-flex gap-x-2 rounded-lg duration-500 hover:bg-transparent hover:border-primary hover:text-primary dark:hover:text-inverted text-base w-48 my-2 capitalize shadow-md hover:shadow-primary/50"
               >
                 <span>
                   <svg
@@ -502,7 +507,7 @@
                     width="29"
                     height="32"
                     fill="currentColor"
-                    class="bi bi-clock-history text-rose-500 mb-2"
+                    class="bi bi-clock-history text-primary mb-2"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -526,7 +531,7 @@
                     width="32"
                     height="32"
                     fill="currentColor"
-                    class="bi bi-folder-fill text-rose-500 mb-2"
+                    class="bi bi-folder-fill text-primary mb-2"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -546,7 +551,7 @@
                     width="32"
                     height="32"
                     fill="currentColor"
-                    class="bi bi-people-fill text-rose-500 mb-2"
+                    class="bi bi-people-fill text-primary mb-2"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -564,7 +569,7 @@
         <section id="skills" class="section pt-14 pb-8 px-3">
           <h2
             data-heading="My Skills"
-            class="before:content-[attr(data-heading)] before:block before:font-medium before:text-base before:text-slate-700 dark:before:text-slate-200 section_title text-center text-2xl mb-12 font-bold font-Courgette text-rose-500 dark:text-rose-500 capitalize"
+            class="before:content-[attr(data-heading)] before:block before:font-medium before:text-base before:text-color-base-alt dark:before:text-color-base-dark-alt section_title text-center text-xl mb-12 font-bold font-Courgette text-primary capitalize"
           >
             technical Level
           </h2>
@@ -581,7 +586,7 @@
                   height="32"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="text-rose-500 mr-4"
+                  class="text-primary mr-4"
                 >
                   <path
                     d="m7.375 16.781 1.25-1.562L4.601 12l4.024-3.219-1.25-1.562-5 4a1 1 0 0 0 0 1.562l5 4zm9.25-9.562-1.25 1.562L19.399 12l-4.024 3.219 1.25 1.562 5-4a1 1 0 0 0 0-1.562l-5-4zm-1.649-4.003-4 18-1.953-.434 4-18z"
@@ -592,7 +597,7 @@
                     Front-end devloper
                   </h1>
                   <span
-                    class="skills_subtitle text-sm text-slate-700 dark:text-slate-300"
+                    class="skills_subtitle text-sm text-color-base-alt dark:text-color-base-dark-alt"
                     >Experience 4+ years</span
                   >
                 </div>
@@ -630,7 +635,7 @@
 
                   <div class="skill-bar w-full h-1.5 bg-slate-700 rounded">
                     <div
-                      class="skill-per-bar max-w-0 h-1.5 bg-rose-500 rounded"
+                      class="skill-per-bar max-w-0 h-1.5 bg-primary rounded"
                     ></div>
                   </div>
                 </li>
@@ -664,7 +669,7 @@
 
                   <div class="skill-bar w-full h-1.5 bg-slate-700 rounded">
                     <div
-                      class="skill-per-bar max-w-0 h-1.5 bg-rose-500 rounded"
+                      class="skill-per-bar max-w-0 h-1.5 bg-primary rounded"
                     ></div>
                   </div>
                 </li>
@@ -698,7 +703,7 @@
 
                   <div class="skill-bar w-full h-1.5 bg-slate-700 rounded">
                     <div
-                      class="skill-per-bar max-w-0 h-1.5 bg-rose-500 rounded"
+                      class="skill-per-bar max-w-0 h-1.5 bg-primary rounded"
                     ></div>
                   </div>
                 </li>
@@ -731,7 +736,7 @@
 
                   <div class="skill-bar w-full h-1.5 bg-slate-700 rounded">
                     <div
-                      class="skill-per-bar max-w-0 h-1.5 bg-rose-500 rounded"
+                      class="skill-per-bar max-w-0 h-1.5 bg-primary rounded"
                     ></div>
                   </div>
                 </li>
@@ -748,7 +753,7 @@
                   width="24"
                   height="24"
                   fill="currentColor"
-                  class="bi bi-braces text-rose-500 mr-4 skills_icon"
+                  class="bi bi-braces text-primary mr-4 skills_icon"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -760,7 +765,7 @@
                     Back-end devloper
                   </h1>
                   <span
-                    class="skills_subtitle text-sm text-slate-700 dark:text-slate-300"
+                    class="skills_subtitle text-sm text-color-base-alt dark:text-color-base-dark-alt"
                     >Experience 3+ years</span
                   >
                 </div>
@@ -799,7 +804,7 @@
 
                   <div class="skill-bar w-full h-1.5 bg-slate-700 rounded">
                     <div
-                      class="skill-per-bar max-w-0 h-1.5 bg-rose-500 rounded"
+                      class="skill-per-bar max-w-0 h-1.5 bg-primary rounded"
                     ></div>
                   </div>
                 </li>
@@ -833,7 +838,7 @@
 
                   <div class="skill-bar w-full h-1.5 bg-slate-700 rounded">
                     <div
-                      class="skill-per-bar max-w-0 h-1.5 bg-rose-500 rounded"
+                      class="skill-per-bar max-w-0 h-1.5 bg-primary rounded"
                     ></div>
                   </div>
                 </li>
@@ -866,7 +871,7 @@
 
                   <div class="skill-bar w-full h-1.5 bg-slate-700 rounded">
                     <div
-                      class="skill-per-bar max-w-0 h-1.5 bg-rose-500 rounded"
+                      class="skill-per-bar max-w-0 h-1.5 bg-primary rounded"
                     ></div>
                   </div>
                 </li>
@@ -899,7 +904,7 @@
 
                   <div class="skill-bar w-full h-1.5 bg-slate-700 rounded">
                     <div
-                      class="skill-per-bar max-w-0 h-1.5 bg-rose-500 rounded"
+                      class="skill-per-bar max-w-0 h-1.5 bg-primary rounded"
                     ></div>
                   </div>
                 </li>
@@ -913,7 +918,7 @@
         <section id="services" class="section pt-12 pb-8 px-3">
           <h2
             data-heading="Services"
-            class="before:content-[attr(data-heading)] before:block before:font-medium before:text-base before:text-slate-700 dark:before:text-slate-200 section_title text-center text-2xl mb-12 font-bold font-Courgette text-rose-500 dark:text-rose-500 capitalize"
+            class="before:content-[attr(data-heading)] before:block before:font-medium before:text-base before:text-color-base-alt dark:before:text-color-base-dark-alt section_title text-center text-xl mb-12 font-bold font-Courgette text-primary capitalize"
           >
             Services i provide
           </h2>
@@ -922,14 +927,14 @@
             class="services-list grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5 [&>div]:bg-white [&>div]:dark:bg-white/5 [&>div]:p-5 [&>div]:text-sm [&>div]:rounded-lg [&>div]:font-light [&>div>h2]:text-xl [&>div>h2]:font-medium [&>div>h2]:mb-3.5 [&>div>a]:text-sm [&>div>a]:mt-5 [&>div>a]:inline-block"
           >
             <div
-              class="transition-colors duration-75 hover:bg-gradient-to-tr hover:from-rose-500 hover:to-rose-600 hover:text-white hover:-translate-y-2.5 shadow-lg group"
+              class="transition-colors duration-75 hover:bg-gradient-to-tl hover:from-primary hover:to-primary-alt hover:text-inverted hover:-translate-y-2.5 shadow-md hover:shadow-primary/50 group"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="50"
                 height="50"
                 fill="currentColor"
-                class="bi bi-globe2 mb-2 text-rose-500 group-hover:text-white"
+                class="bi bi-globe2 mb-2 text-primary group-hover:text-inverted"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -937,7 +942,7 @@
                 />
               </svg>
               <h2>Web Design</h2>
-              <p>
+              <p class="group-hover:text-muted">
                 weather you are running bussines instituion like school college
                 hospital or you are blogger youtuber gamer ,i will design
                 responsive secure seo friendly web app for you
@@ -946,14 +951,14 @@
             </div>
 
             <div
-              class="transition-colors duration-75 hover:bg-gradient-to-tr hover:from-rose-500 hover:to-rose-600 hover:text-white hover:-translate-y-2.5 shadow-lg group"
+              class="transition-colors duration-75 hover:bg-gradient-to-tl hover:from-primary hover:to-primary-alt hover:text-inverted hover:-translate-y-2.5 shadow-md hover:shadow-primary/50 group"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="50"
                 height="50"
                 fill="currentColor"
-                class="bi bi-megaphone mb-2 text-rose-500 group-hover:text-white"
+                class="bi bi-megaphone mb-2 text-primary group-hover:text-inverted"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -961,19 +966,21 @@
                 />
               </svg>
               <h2>Digital Marketing</h2>
-              <p>to grow your bussines you must run digi advertisement</p>
+              <p class="group-hover:text-muted">
+                to grow your bussines you must run digi advertisement
+              </p>
               <a href="#" class="text-sm mt-5 block">Learn more</a>
             </div>
 
             <div
-              class="transition-colors duration-75 hover:bg-gradient-to-l hover:from-rose-500 hover:to-rose-600 hover:text-white hover:-translate-y-2.5 shadow-lg group"
+              class="transition-colors duration-75 hover:bg-gradient-to-tl hover:from-primary hover:to-primary-alt hover:text-inverted hover:-translate-y-2.5 shadow-md hover:shadow-primary/50 group"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="50"
                 height="50"
                 fill="currentColor"
-                class="bi bi-search mb-2 text-rose-500 group-hover:text-white"
+                class="bi bi-search mb-2 text-primary group-hover:text-inverted"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -981,7 +988,7 @@
                 />
               </svg>
               <h2>SEO services</h2>
-              <p>
+              <p class="group-hover:text-muted">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatem laboriosam nisi porro quia
               </p>
@@ -993,11 +1000,10 @@
         <section id="portfolio" class="section pt-12 pb-8 px-3">
           <h2
             data-heading="portfolio"
-            class="before:content-[attr(data-heading)] before:block before:font-medium before:text-base before:text-slate-700 dark:before:text-slate-200 section_title text-center text-2xl mb-12 font-bold font-Courgette text-rose-500 dark:text-rose-500 capitalize"
+            class="before:content-[attr(data-heading)] before:block before:font-medium before:text-base before:text-color-base-alt dark:before:text-color-base-dark-alt section_title text-center text-xl mb-12 font-bold font-Courgette text-primary capitalize"
           >
             My Work
           </h2>
-
           <div
             class="portfolio_container grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-x-5 gap-y-10"
           >
@@ -1026,14 +1032,14 @@
                   <a
                     href="https://github.com/talhahjan/faa"
                     target="_blank"
-                    class="bg-transparent border border-rose-500 font-bold py-1 px-3 items-center inline-flex gap-x-2 rounded-md duration-500 hover:bg-rose-500 hover:border-transparent hover:text-white dark:hover:text-inherit text-sm my-2 capitalize shadow-md"
+                    class="bg-transparent border border-primary font-bold py-1 px-3 items-center inline-flex gap-x-2 rounded-md duration-500 hover:bg-primary hover:border-transparent hover:text-inverted text-sm my-2 capitalize shadow-md hover:shadow-primary/50"
                   >
                     Github</a
                   >
                   <a
                     href="http://faa.vercel.app/"
                     target="_blank"
-                    class="bg-rose-500 text-white border border-transparent font-bold py-1 px-4 items-center inline-flex gap-x-2 rounded-md duration-500 hover:bg-transparent hover:border-rose-500 hover:text-rose-500 dark:hover:text-inherit text-sm my-2 capitalize shadow-md"
+                    class="bg-primary border border-transparent font-bold py-1 px-4 items-center inline-flex gap-x-2 rounded-md duration-500 hover:bg-none hover:border-primary text-inverted hover:text-inherit text-sm my-2 capitalize shadow-md hover:shadow-primary/50"
                   >
                     Live demo</a
                   >
@@ -1066,14 +1072,14 @@
                   <a
                     href="https://github.com/talhahjan/wordpress-theme"
                     target="_blank"
-                    class="bg-transparent border border-rose-500 font-bold py-1 px-2 items-center inline-flex gap-x-2 rounded-md duration-500 hover:bg-rose-500 hover:border-transparent hover:text-white dark:hover:text-inherit text-sm my-2 capitalize shadow-md"
+                    class="bg-transparent border border-primary font-bold py-1 px-3 items-center inline-flex gap-x-2 rounded-md duration-500 hover:bg-primary hover:border-transparent hover:text-inverted text-sm my-2 capitalize shadow-md hover:shadow-primary/50"
                   >
                     Github</a
                   >
                   <a
                     href="http://wordpress-lake.vercel.app/"
                     target="_blank"
-                    class="bg-rose-500 text-white border border-transparent font-bold py-1 px-4 items-center inline-flex gap-x-2 rounded-md duration-500 hover:bg-transparent hover:border-rose-500 hover:text-rose-500 dark:hover:text-inherit text-sm my-2 capitalize shadow-md"
+                    class="bg-primary border border-transparent font-bold py-1 px-4 items-center inline-flex gap-x-2 rounded-md duration-500 hover:bg-transparent hover:border-primary text-inverted hover:text-inherit text-sm my-2 capitalize shadow-md hover:shadow-primary/50"
                   >
                     Live demo</a
                   >
@@ -1089,7 +1095,7 @@
                   data-mdb-ripple-color="light"
                 >
                   <img src="assets/images/work_03.png" class="w-full" alt="" />
-                  <a href="">
+                  <a href="#">
                     <div
                       class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out bg-black/15"
                     ></div>
@@ -1106,14 +1112,14 @@
                   <a
                     href="https://github.com/talhahjan/react-shop"
                     target="_blank"
-                    class="bg-transparent border border-rose-500 font-bold py-1 px-2 items-center inline-flex gap-x-2 rounded-md duration-500 hover:bg-rose-500 hover:border-transparent hover:text-white dark:hover:text-inherit text-sm my-2 capitalize shadow-md"
+                    class="bg-transparent border border-primary font-bold py-1 px-3 items-center inline-flex gap-x-2 rounded-md duration-500 hover:bg-primary hover:border-transparent hover:text-inverted text-sm my-2 capitalize shadow-md hover:shadow-primary/50"
                   >
                     Github</a
                   >
                   <a
                     href="https://react-shop-theta.vercel.app/"
                     target="_blank"
-                    class="bg-rose-500 text-white border border-transparent font-bold py-1 px-4 items-center inline-flex gap-x-2 rounded-md duration-500 hover:bg-transparent hover:border-rose-500 hover:text-rose-500 dark:hover:text-inherit text-sm my-2 capitalize shadow-md"
+                    class="bg-primary border border-transparent font-bold py-1 px-4 items-center inline-flex gap-x-2 rounded-md duration-500 hover:bg-transparent hover:border-primary text-inverted hover:text-inherit text-sm my-2 capitalize shadow-md hover:shadow-primary/50"
                   >
                     Live demo</a
                   >
@@ -1126,7 +1132,7 @@
         <section id="contact-me" class="section pt-12 pb-8 px-3 h-[500px]">
           <h2
             data-heading="Contact"
-            class="before:content-[attr(data-heading)] before:block before:font-medium before:text-base before:text-slate-700 dark:before:text-slate-200 section_title text-center text-2xl mb-12 font-bold font-Courgette text-rose-500 dark:text-rose-500 capitalize"
+            class="before:content-[attr(data-heading)] before:block before:font-medium before:text-base before:text-color-base-alt dark:before:text-color-base-dark-alt section_title text-center text-xl mb-12 font-bold font-Courgette text-primary capitalize"
           >
             Get In Touch
           </h2>

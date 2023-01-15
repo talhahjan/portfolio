@@ -22,17 +22,18 @@ goToTopBtn.addEventListener(
 
 const animateText = () => {
   setTimeout(() => {
-    animatedText.textContent = "web devloper";
-  }, 0);
-
-  setTimeout(() => {
-    animatedText.textContent = "blogger";
+    animatedText.innerText = "blogger";
   }, 5000);
 
   setTimeout(() => {
-    animatedText.textContent = "freelancer";
+    animatedText.innerText = "freelancer";
   }, 10000);
-  setInterval(animateText, 15000);
+
+  setTimeout(() => {
+    animatedText.innerText = "web devloper";
+  }, 15000);
+
+  setInterval(animateText, 20000);
 };
 
 navLinks.forEach((link) => {
@@ -169,6 +170,7 @@ const frontendSkillObserver = new IntersectionObserver(
 
 backendSkillObserver.observe(backendSkills);
 frontendSkillObserver.observe(frontendSkills);
+
 window.onload = (e) => {
   onWindowLoad();
   animateText();
