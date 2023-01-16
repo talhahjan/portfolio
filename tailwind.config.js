@@ -58,6 +58,7 @@ module.exports = {
 
       animation: {
         animateText: "typingText 4s steps(12) infinite",
+        spin2: "spin 4s linear infinite;",
       },
       padding: {
         "1/3": "33.333333%",

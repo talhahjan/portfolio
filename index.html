@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/tailwind.css" />
     <title>Khalid Dashti :: Personel Portfolio</title>
   </head>
-  <body class="theme-cyan">
+  <body>
     <button
       class="fixed bottom-5 right-7 z-50 bg-primary shadow-md hover:shadow-primary/50 cursor-pointer text-inverted w-8 h-8 rounded-md"
       id="goToTopBtn"
@@ -26,6 +26,7 @@
         />
       </svg>
     </button>
+
     <div class="wrapper">
       <!-- ============== Header section start ============== -->
       <header>
@@ -1139,6 +1140,49 @@
         </section>
       </main>
       <footer class="px-3">assas</footer>
+    </div>
+
+    <div
+      class="fixed right-0 top-60 bg-white dark:bg-body-dark/60 backdrop-blur-xl py-2 px-4 border-r-0 border border-white/10 rounded-l-md shadow-md z-[50] duration-200 translate-x-full"
+      id="style-switcher"
+    >
+      <button
+        class="style-switcher-toggler shadow-md absolute h-8 w-8 top-0 mr-2 cursor-pointer flex items-center justify-center right-full bg-white dark:bg-body-dark/60 backdrop-blur-xl border border-white/10 rounded-full"
+        id="theme-switcher-toggler"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-gear animate-spin2"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
+          />
+        </svg>
+      </button>
+      <h4
+        class="text-color-base-alt dark:text-color-base-dark-alt text-base font-bold my-2 capitalize font-Courgette"
+      >
+        Theme Colors
+      </h4>
+      <div
+        class="grid grid-cols-3 items-center gap-2 my-2 [&>span]:hover:cursor-pointer [&>span]:h-6 [&>span]:w-6 [&>span]:rounded-full"
+        id="theme-list"
+      >
+        <!-- leave first span class blank to access root theme  -->
+        <span class="bg-rose-500 theme-default"></span>
+        <span class="skin-teal bg-primary"></span>
+        <span class="skin-indigo bg-primary"> </span>
+        <span class="skin-purple bg-primary"></span>
+        <span class="skin-emerald bg-primary"></span>
+        <span class="skin-red bg-primary"></span>
+        <span class="skin-orange bg-primary"></span>
+        <span class="skin-pink bg-primary"></span>
+        <span class="skin-stone bg-primary"></span>
+      </div>
     </div>
 
     <script src="assets/js/javascript.js" async></script>

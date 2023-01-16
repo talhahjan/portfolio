@@ -13,7 +13,37 @@ const navBar = document.querySelector("header nav"),
   backendSkills = document.getElementById("skill-list-backend"),
   frontendSkills = document.getElementById("skill-list-frontend"),
   goToTopBtn = document.getElementById("goToTopBtn"),
-  speed = 60;
+  speed = 60,
+  themeSwitcherBtn = document.getElementById("theme-switcher-toggler"),
+  themesList = document.querySelectorAll("#theme-list span");
+
+const switchSkin = (skinClass) => {
+  document.querySelector("body").className = skinClass;
+};
+
+themesList.forEach((theme) => {
+  theme.addEventListener("click", (e) => {
+    if (theme.classList.contains("skin-default")) {
+      localStorage.removeItem("primaryColor");
+      return switchSkin(null);
+    }
+
+    let selectedTheme = theme.className.replace(" bg-primary", "");
+
+    localStorage.setItem("primaryColor", selectedTheme);
+
+    switchSkin(selectedTheme);
+    document
+      .getElementById("style-switcher")
+      .classList.toggle("translate-x-full");
+  });
+});
+
+themeSwitcherBtn.addEventListener("click", () => {
+  document
+    .getElementById("style-switcher")
+    .classList.toggle("translate-x-full");
+});
 
 goToTopBtn.addEventListener(
   "click",
@@ -23,7 +53,7 @@ goToTopBtn.addEventListener(
 const animateText = () => {
   setTimeout(() => {
     animatedText.innerText = "blogger";
-  }, 5000);
+  }, 4900);
 
   setTimeout(() => {
     animatedText.innerText = "freelancer";
@@ -31,9 +61,9 @@ const animateText = () => {
 
   setTimeout(() => {
     animatedText.innerText = "web devloper";
-  }, 15000);
+  }, 15900);
 
-  setInterval(animateText, 20000);
+  setInterval(animateText, 23000);
 };
 
 navLinks.forEach((link) => {
@@ -87,6 +117,7 @@ const saveTheme = (theme) => {
 };
 
 const onWindowLoad = () => {
+  if (localStorage.primaryColor) switchSkin(localStorage.primaryColor);
   if (localStorage.theme === "dark") {
     let theme = document.getElementById("dark");
     saveTheme(theme);

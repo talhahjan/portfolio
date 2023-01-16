@@ -29,23 +29,25 @@
   }
 }
 
-.theme-red {
+.skin-fuchsia {
   --color-text-primary: rgb(var(--fill-primary));
   --color-text-muted: rgb(250, 232, 255);
   --color-text-inverted: rgb(255, 255, 255);
   --fill-primary: 217, 70, 239;
   --fill-primary-alt: 192, 38, 211;
+  @apply transition-colors duration-700;
 }
 
-.theme-cyan {
+.skin-cyan {
   --color-text-primary: rgb(var(--fill-primary));
   --color-text-muted: rgb(207, 250, 254);
   --color-text-inverted: rgb(255, 255, 255);
   --fill-primary: 6, 182, 212;
   --fill-primary-alt: 8, 145, 178;
+  @apply transition-colors duration-700;
 }
 
-.theme-teal {
+.skin-teal {
   --color-text-primary: rgb(var(--fill-primary));
   --color-text-muted: rgb(204, 251, 241);
   --color-text-inverted: rgb(255, 255, 255);
@@ -53,7 +55,7 @@
   --fill-primary-alt: 13, 148, 136;
 }
 
-.theme-indigo {
+.skin-indigo {
   --color-text-primary: rgb(var(--fill-primary));
   --color-text-muted: rgb(224, 231, 255);
   --color-text-inverted: rgb(255, 255, 255);
@@ -61,7 +63,7 @@
   --fill-primary-alt: 79, 70, 229;
 }
 
-.theme-purple {
+.skin-purple {
   --color-text-primary: rgb(var(--fill-primary));
   --color-text-muted: rgb(243, 232, 255);
   --color-text-inverted: rgb(255, 255, 255);
@@ -69,15 +71,15 @@
   --fill-primary-alt: 147, 51, 234;
 }
 
-.theme-red {
+.skin-violet {
   --color-text-primary: rgb(var(--fill-primary));
-  --color-text-muted: rgb(254, 226, 226);
+  --color-text-muted: rgb(237, 233, 254);
   --color-text-inverted: rgb(255, 255, 255);
-  --fill-primary: 239, 68, 68;
-  --fill-primary-alt: 220, 38, 38;
+  --fill-primary: 139, 92, 246;
+  --fill-primary-alt: 124, 58, 237;
 }
 
-.theme-pink {
+.skin-pink {
   --color-text-primary: rgb(var(--fill-primary));
   --color-text-muted: rgb(252, 231, 243);
   --color-text-inverted: rgb(255, 255, 255);
@@ -85,7 +87,7 @@
   --fill-primary-alt: 219, 39, 119;
 }
 
-.theme-emerald {
+.skin-emerald {
   --color-text-primary: rgb(var(--fill-primary));
   --color-text-muted: rgb(209, 250, 229);
   --color-text-inverted: rgb(255, 255, 255);
@@ -93,23 +95,23 @@
   --fill-primary-alt: 5, 150, 105;
 }
 
-.theme-red {
+.skin-red {
   --color-text-primary: rgb(var(--fill-primary));
-  --color-text-muted: rgb(250, 232, 255);
+  --color-text-muted: rgb(254, 226, 226);
   --color-text-inverted: rgb(255, 255, 255);
-  --fill-primary: 217, 70, 239;
-  --fill-primary-alt: 192, 38, 211;
+  --fill-primary: 239, 68, 68;
+  --fill-primary-alt: 220, 38, 38;
 }
 
-.theme-orange {
+.skin-orange {
   --color-text-primary: rgb(var(--fill-primary));
-  --color-text-muted: rgb(250, 232, 255);
+  --color-text-muted: rgb(255, 237, 213);
   --color-text-inverted: rgb(255, 255, 255);
-  --fill-primary: 217, 70, 239;
-  --fill-primary-alt: 192, 38, 211;
+  --fill-primary: 249, 115, 22;
+  --fill-primary-alt: 234, 88, 12;
 }
 
-.theme-stone {
+.skin-stone {
   --color-text-primary: rgb(var(--fill-primary));
   --color-text-muted: rgb(rgba(245, 245, 244, 1));
   --color-text-inverted: rgb(255, 255, 255);
@@ -117,7 +119,7 @@
   --fill-primary-alt: 87, 83, 78;
 }
 
-.theme-fuchsia {
+.skin-fuchsia {
   --color-text-primary: rgb(var(--fill-primary));
   --color-text-muted: rgb(250, 232, 255);
   --color-text-inverted: rgb(255, 255, 255);
@@ -152,14 +154,6 @@ body {
   }
 }
 
-@keyframes fillBars {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
 .navbar-fixed {
   @apply shadow-lg dark:bg-slate-800/10 dark:border-b border-indigo-500/20;
 }
