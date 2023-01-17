@@ -23,16 +23,13 @@ const switchSkin = (skinClass) => {
 
 skinsList.forEach((skin) => {
   skin.addEventListener("click", (e) => {
-    if (skin.classList.contains("skin-default")) {
-      localStorage.removeItem("skin");
-      return switchSkin(null);
-    }
-
-    let selectedSkin = skin.className.replace(" bg-primary", "");
-
+    let isDefault = skin.classList.contains("skin-default");
+    if (isDefault) localStorage.removeItem("skin");
+    let skinClass = skin.className.replace("bg-primary", "");
+    let selectedSkin = isDefault ? null : skinClass.trim();
     localStorage.setItem("skin", selectedSkin);
-
     switchSkin(selectedSkin);
+
     document
       .getElementById("skin-switcher")
       .classList.toggle("translate-x-full");
@@ -55,13 +52,13 @@ const animateText = () => {
 
   setTimeout(() => {
     animatedText.innerText = "freelancer";
-  }, 10000);
+  }, 11000);
 
   setTimeout(() => {
     animatedText.innerText = "web devloper";
   }, 15900);
 
-  setInterval(animateText, 23000);
+  setInterval(animateText, 25000);
 };
 
 navLinks.forEach((link) => {
@@ -115,7 +112,7 @@ const saveTheme = (theme) => {
 };
 
 const onWindowLoad = () => {
-  if (localStorage.skinColor) switchSkin(localStorage.skinColor);
+  if (localStorage.skin) switchSkin(localStorage.skin);
   if (localStorage.theme === "dark") {
     let theme = document.getElementById("dark");
     saveTheme(theme);
