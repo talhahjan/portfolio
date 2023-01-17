@@ -14,35 +14,33 @@ const navBar = document.querySelector("header nav"),
   frontendSkills = document.getElementById("skill-list-frontend"),
   goToTopBtn = document.getElementById("goToTopBtn"),
   speed = 60,
-  themeSwitcherBtn = document.getElementById("theme-switcher-toggler"),
-  themesList = document.querySelectorAll("#theme-list span");
+  skinSwitcherBtn = document.getElementById("skin-switcher-toggler"),
+  skinsList = document.querySelectorAll("#skin-list span");
 
 const switchSkin = (skinClass) => {
   document.querySelector("body").className = skinClass;
 };
 
-themesList.forEach((theme) => {
-  theme.addEventListener("click", (e) => {
-    if (theme.classList.contains("skin-default")) {
-      localStorage.removeItem("primaryColor");
+skinsList.forEach((skin) => {
+  skin.addEventListener("click", (e) => {
+    if (skin.classList.contains("skin-default")) {
+      localStorage.removeItem("skin");
       return switchSkin(null);
     }
 
-    let selectedTheme = theme.className.replace(" bg-primary", "");
+    let selectedSkin = skin.className.replace(" bg-primary", "");
 
-    localStorage.setItem("primaryColor", selectedTheme);
+    localStorage.setItem("skin", selectedSkin);
 
-    switchSkin(selectedTheme);
+    switchSkin(selectedSkin);
     document
-      .getElementById("style-switcher")
+      .getElementById("skin-switcher")
       .classList.toggle("translate-x-full");
   });
 });
 
-themeSwitcherBtn.addEventListener("click", () => {
-  document
-    .getElementById("style-switcher")
-    .classList.toggle("translate-x-full");
+skinSwitcherBtn.addEventListener("click", () => {
+  document.getElementById("skin-switcher").classList.toggle("translate-x-full");
 });
 
 goToTopBtn.addEventListener(
@@ -117,7 +115,7 @@ const saveTheme = (theme) => {
 };
 
 const onWindowLoad = () => {
-  if (localStorage.primaryColor) switchSkin(localStorage.primaryColor);
+  if (localStorage.skinColor) switchSkin(localStorage.skinColor);
   if (localStorage.theme === "dark") {
     let theme = document.getElementById("dark");
     saveTheme(theme);
