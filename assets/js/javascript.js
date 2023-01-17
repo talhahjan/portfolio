@@ -3,22 +3,21 @@ const navBar = document.querySelector("header nav"),
   navMenu = document.getElementById("nav-menu"),
   ThemeIcon = document.getElementById("themeIcon"),
   themes = document.querySelectorAll('[name="theme"][type="radio"]'),
-  html = document.documentElement,
-  defaultMode = "system", // string : 'dark' , 'light' or 'system'
-  //check if darkMode is active in user system
-  darkModeQuery = matchMedia("(prefers-color-scheme: dark)"),
   navLinks = document.querySelectorAll("#nav-menu li a"),
   animatedText = document.getElementById("animated-text"),
   textList = document.querySelectorAll("#animated-text-list li"),
   backendSkills = document.getElementById("skill-list-backend"),
   frontendSkills = document.getElementById("skill-list-frontend"),
   goToTopBtn = document.getElementById("goToTopBtn"),
+  skinSwitcherBtn = document.getElementById("skin-switcher-toggler"),
+  skinsList = document.querySelectorAll("#skin-list span"),
+  html = document.documentElement,
+  defaultMode = "system", // string : 'dark' , 'light' or 'system'
+  //check if darkMode is active in user system
+  darkModeQuery = matchMedia("(prefers-color-scheme: dark)"),
   speed = 60,
   // delay watching dark mode changes by user if setting is set to system setting
   watchTime = 2000;
-(skinSwitcherBtn = document.getElementById("skin-switcher-toggler")),
-  (skinsList = document.querySelectorAll("#skin-list span"));
-
 const switchSkin = (skinClass) => {
   document.querySelector("body").className = skinClass;
 };
