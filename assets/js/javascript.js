@@ -14,8 +14,10 @@ const navBar = document.querySelector("header nav"),
   frontendSkills = document.getElementById("skill-list-frontend"),
   goToTopBtn = document.getElementById("goToTopBtn"),
   speed = 60,
-  skinSwitcherBtn = document.getElementById("skin-switcher-toggler"),
-  skinsList = document.querySelectorAll("#skin-list span");
+  // delay watching dark mode changes by user if setting is set to system setting
+  watchTime = 2000;
+(skinSwitcherBtn = document.getElementById("skin-switcher-toggler")),
+  (skinsList = document.querySelectorAll("#skin-list span"));
 
 const switchSkin = (skinClass) => {
   document.querySelector("body").className = skinClass;
@@ -79,7 +81,7 @@ window.addEventListener("scroll", () => {
 
 themes.forEach((theme) => {
   theme.addEventListener("click", (event) => {
-    saveTheme(theme);
+    saveTheme(theme.id);
   });
 });
 
@@ -87,10 +89,11 @@ NavBarToggler.addEventListener("click", () => {
   toggleNavbar();
 });
 
-const saveTheme = (theme) => {
-  let svg = theme.nextElementSibling.children[0].outerHTML;
+const saveTheme = (themeID) => {
+  const theme = document.getElementById(themeID);
+  let svg = theme.parentElement.querySelector("svg").outerHTML;
   ThemeIcon.innerHTML = svg;
-  document.getElementById(theme.id).checked = true;
+  theme.checked = true;
   switch (theme.id) {
     case "light":
       localStorage.setItem("theme", "light");
@@ -101,31 +104,10 @@ const saveTheme = (theme) => {
       html.className = "dark";
       break;
     case "system":
+    default:
       localStorage.setItem("theme", "system");
       html.className = darkModeQuery.matches ? "dark" : "light";
       break;
-    default:
-      localStorage.removeItem("theme");
-      html.className = defaultMode;
-      break;
-  }
-};
-
-const watchThemeMode = () => {
-  if (localStorage.skin) switchSkin(localStorage.skin);
-
-  if (localStorage.theme === "dark") {
-    let theme = document.getElementById("dark");
-    return saveTheme(theme);
-  } else if (localStorage.theme === "light") {
-    let theme = document.getElementById("light");
-    return saveTheme(theme);
-  } else if (localStorage.theme === "system") {
-    let theme = document.getElementById("system");
-    return saveTheme(theme);
-  } else {
-    let theme = document.getElementById(defaultMode);
-    return saveTheme(theme);
   }
 };
 
@@ -199,10 +181,14 @@ backendSkillObserver.observe(backendSkills);
 frontendSkillObserver.observe(frontendSkills);
 
 window.onload = (e) => {
-  watchThemeMode();
-  // if dark mode  set to system keep watch change of user
-  //  system setting after every 5 seconds
-  if (!localStorage.theme || localStorage.theme == "system")
-    setInterval(watchThemeMode, 5000);
   animateText();
+  let selectedTheme = localStorage.theme ?? defaultMode;
+  if (localStorage.skin) switchSkin(localStorage.skin);
+  saveTheme(selectedTheme);
+
+  if (selectedTheme == "system")
+    setInterval(() => {
+      saveTheme("system");
+      console.log("watching system deafult mode");
+    }, watchTime);
 };

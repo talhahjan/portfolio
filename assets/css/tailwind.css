@@ -5352,16 +5352,12 @@ textarea.form-control.is-invalid{
   bottom: 0px;
 }
 
-.top-60{
-  top: 15rem;
+.top-32{
+  top: 8rem;
 }
 
 .right-full{
   right: 100%;
-}
-
-.top-32{
-  top: 8rem;
 }
 
 .isolate{
@@ -6654,10 +6650,6 @@ textarea.form-control.is-invalid{
   border-color: rgb(255 255 255 / 0.1);
 }
 
-.border-white\/5{
-  border-color: rgb(255 255 255 / 0.05);
-}
-
 .bg-primary{
   --tw-bg-opacity: 1;
   background-color: rgba(var(--fill-primary), var(--tw-bg-opacity));
@@ -6699,22 +6691,6 @@ textarea.form-control.is-invalid{
 .bg-\[rgb\(255\2c 0\2c 0\)\]{
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-black\/90{
-  background-color: rgb(0 0 0 / 0.9);
-}
-
-.bg-black\/10{
-  background-color: rgb(0 0 0 / 0.1);
-}
-
-.bg-black\/5{
-  background-color: rgb(0 0 0 / 0.05);
-}
-
-.bg-black\/50{
-  background-color: rgb(0 0 0 / 0.5);
 }
 
 .bg-gradient-to-r{
@@ -7400,11 +7376,6 @@ textarea.form-control.is-invalid{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;
 }
 
-.shadow-black{
-  --tw-shadow-color: #000;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
 .shadow-black\/10{
   --tw-shadow-color: rgb(0 0 0 / 0.1);
   --tw-shadow: var(--tw-shadow-colored);
@@ -8065,32 +8036,8 @@ body {
   background-color: rgb(255 255 255 / 0.05);
 }
 
-.dark .dark\:bg-body-dark\/60{
-  background-color: rgba(var(--body-bg-dark), 0.6);
-}
-
 .dark .dark\:bg-white\/10{
   background-color: rgb(255 255 255 / 0.1);
-}
-
-.dark .dark\:bg-white\/50{
-  background-color: rgb(255 255 255 / 0.5);
-}
-
-.dark .dark\:bg-black\/80{
-  background-color: rgb(0 0 0 / 0.8);
-}
-
-.dark .dark\:bg-slate-700\/80{
-  background-color: rgb(51 65 85 / 0.8);
-}
-
-.dark .dark\:bg-black\/50{
-  background-color: rgb(0 0 0 / 0.5);
-}
-
-.dark .dark\:bg-white\/20{
-  background-color: rgb(255 255 255 / 0.2);
 }
 
 .dark .dark\:text-color-base-dark-alt{
@@ -8218,6 +8165,18 @@ body {
 
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-\[auto-fit\2c max-content_1fr_max-content\]{
+    grid-template-columns: auto-fit max-content 1fr max-content;
+  }
+
+  .md\:grid-cols-\[max-content_minmax\(400px\2c 1fr\)_max-content\]{
+    grid-template-columns: max-content minmax(400px,1fr) max-content;
+  }
+
+  .md\:grid-cols-\[auto-fit\2c max-content_minmax\(400px\2c 1fr\)_max-content\]{
+    grid-template-columns: auto-fit max-content minmax(400px,1fr) max-content;
   }
 
   .md\:grid-rows-1{
