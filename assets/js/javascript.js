@@ -111,20 +111,21 @@ const saveTheme = (theme) => {
   }
 };
 
-const onWindowLoad = () => {
+const watchThemeMode = () => {
   if (localStorage.skin) switchSkin(localStorage.skin);
+
   if (localStorage.theme === "dark") {
     let theme = document.getElementById("dark");
-    saveTheme(theme);
+    return saveTheme(theme);
   } else if (localStorage.theme === "light") {
     let theme = document.getElementById("light");
-    saveTheme(theme);
+    return saveTheme(theme);
   } else if (localStorage.theme === "system") {
     let theme = document.getElementById("system");
-    saveTheme(theme);
+    return saveTheme(theme);
   } else {
     let theme = document.getElementById(defaultMode);
-    saveTheme(theme);
+    return saveTheme(theme);
   }
 };
 
@@ -198,6 +199,10 @@ backendSkillObserver.observe(backendSkills);
 frontendSkillObserver.observe(frontendSkills);
 
 window.onload = (e) => {
-  onWindowLoad();
+  watchThemeMode();
+  // if dark mode  set to system keep watch change of user
+  //  system setting after every 5 seconds
+  if (!localStorage.theme || localStorage.theme == "system")
+    setInterval(watchThemeMode, 5000);
   animateText();
 };
