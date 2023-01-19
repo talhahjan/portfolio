@@ -27,6 +27,33 @@
     --fill-primary-alt: 190, 18, 60;
     --body-bg: 238, 238, 238;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  a {
+    @apply hover:text-color-base-alt dark:hover:text-color-base-dark-alt duration-300 text-base;
+  }
+  body {
+    @apply p-0 m-0 box-border font-Poppins font-normal bg-body dark:bg-body-dark text-color-base dark:text-color-base-dark;
+  }
+
+  .navbar-fixed {
+    @apply shadow-lg dark:bg-slate-800/10 dark:border-b border-indigo-500/20;
+  }
+  .wrapper {
+    @apply flex flex-col justify-between h-screen max-w-5xl text-left mx-auto gap-2;
+  }
+
+  @keyframes typingText {
+    40%,
+    60% {
+      left: 100%;
+    }
+    100% {
+      left: 0%;
+    }
+  }
 }
 
 .skin-fuchsia {
@@ -113,7 +140,7 @@
 
 .skin-stone {
   --color-text-primary: rgb(var(--fill-primary));
-  --color-text-muted: rgb(rgba(245, 245, 244, 1));
+  --color-text-muted: rgb(rgb(245, 245, 244));
   --color-text-inverted: rgb(255, 255, 255);
   --fill-primary: 120, 113, 108;
   --fill-primary-alt: 87, 83, 78;
@@ -125,38 +152,4 @@
   --color-text-inverted: rgb(255, 255, 255);
   --fill-primary: 217, 70, 239;
   --fill-primary-alt: 192, 38, 211;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-body {
-  @apply bg-body dark:bg-body-dark text-color-base dark:text-color-base-dark;
-}
-
-@keyframes typingText {
-  40%,
-  60% {
-    left: 100%;
-  }
-  100% {
-    left: 0%;
-  }
-}
-
-.navbar-fixed {
-  @apply shadow-lg dark:bg-slate-800/10 dark:border-b border-indigo-500/20;
-}
-.wrapper {
-  @apply flex flex-col justify-between h-screen max-w-5xl text-left mx-auto gap-2;
 }

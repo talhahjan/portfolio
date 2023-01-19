@@ -3,21 +3,20 @@ const navBar = document.querySelector("header nav"),
   navMenu = document.getElementById("nav-menu"),
   ThemeIcon = document.getElementById("themeIcon"),
   themes = document.querySelectorAll('[name="theme"][type="radio"]'),
+  html = document.documentElement,
+  defaultMode = "dark", // string : 'dark' , 'light' or 'system'
+  //check if darkMode is active in user system
+  darkModeQuery = matchMedia("(prefers-color-scheme: dark)"),
   navLinks = document.querySelectorAll("#nav-menu li a"),
   animatedText = document.getElementById("animated-text"),
   textList = document.querySelectorAll("#animated-text-list li"),
   backendSkills = document.getElementById("skill-list-backend"),
   frontendSkills = document.getElementById("skill-list-frontend"),
   goToTopBtn = document.getElementById("goToTopBtn"),
-  skinSwitcherBtn = document.getElementById("skin-switcher-toggler"),
-  skinsList = document.querySelectorAll("#skin-list span"),
-  html = document.documentElement,
-  defaultMode = "system", // string : 'dark' , 'light' or 'system'
-  //check if darkMode is active in user system
-  darkModeQuery = matchMedia("(prefers-color-scheme: dark)"),
   speed = 60,
-  // delay watching dark mode changes by user if setting is set to system setting
-  watchTime = 2000;
+  skinSwitcherBtn = document.getElementById("skin-switcher-toggler"),
+  skinsList = document.querySelectorAll("#skin-list span");
+
 const switchSkin = (skinClass) => {
   document.querySelector("body").className = skinClass;
 };
@@ -89,11 +88,11 @@ NavBarToggler.addEventListener("click", () => {
 });
 
 const saveTheme = (themeID) => {
-  const theme = document.getElementById(themeID);
-  let svg = theme.parentElement.querySelector("svg").outerHTML;
+  let theme = document.getElementById(themeID);
+  let svg = theme.nextElementSibling.children[0].outerHTML;
   ThemeIcon.innerHTML = svg;
   theme.checked = true;
-  switch (theme.id) {
+  switch (themeID) {
     case "light":
       localStorage.setItem("theme", "light");
       html.className = "light";
@@ -103,11 +102,19 @@ const saveTheme = (themeID) => {
       html.className = "dark";
       break;
     case "system":
-    default:
       localStorage.setItem("theme", "system");
       html.className = darkModeQuery.matches ? "dark" : "light";
       break;
+    default:
+      localStorage.removeItem("theme");
+      html.className = defaultMode;
+      break;
   }
+};
+
+const watchThemeMode = () => {
+  let mode = localStorage.theme ?? defaultMode;
+  saveTheme(mode);
 };
 
 const backendSkillObserver = new IntersectionObserver(
@@ -180,14 +187,15 @@ backendSkillObserver.observe(backendSkills);
 frontendSkillObserver.observe(frontendSkills);
 
 window.onload = (e) => {
-  animateText();
-  let selectedTheme = localStorage.theme ?? defaultMode;
   if (localStorage.skin) switchSkin(localStorage.skin);
-  saveTheme(selectedTheme);
-
-  if (selectedTheme == "system")
-    setInterval(() => {
-      saveTheme("system");
-      console.log("watching system deafult mode");
-    }, watchTime);
+  watchThemeMode();
+  // keep call saveTheme function if dark mode set to system keep watch change of user
+  //  system setting after every 5 seconds
+  setInterval(() => {
+    let curMode = localStorage.theme ?? defaultMode;
+    if (curMode != "system") return;
+    watchThemeMode();
+    console.log("watching", curMode);
+  }, 5000);
+  animateText();
 };

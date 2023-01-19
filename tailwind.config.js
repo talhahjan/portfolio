@@ -66,7 +66,7 @@ module.exports = {
       },
       fontFamily: {
         Courgette: ["Courgette, cursive"],
-        Poppins: ["Poppins"],
+        Poppins: ["'Poppins', sans-serif"],
       },
     },
   },
