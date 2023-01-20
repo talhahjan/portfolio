@@ -13,9 +13,10 @@ const navBar = document.querySelector("header nav"),
   backendSkills = document.getElementById("skill-list-backend"),
   frontendSkills = document.getElementById("skill-list-frontend"),
   goToTopBtn = document.getElementById("goToTopBtn"),
-  speed = 60,
   skinSwitcherBtn = document.getElementById("skin-switcher-toggler"),
-  skinsList = document.querySelectorAll("#skin-list span");
+  skinsList = document.querySelectorAll("#skin-list span"),
+  modeWatchTimeDelay=3000,
+  speed = 60;
 
 const switchSkin = (skinClass) => {
   document.querySelector("body").className = skinClass;
@@ -196,6 +197,6 @@ window.onload = (e) => {
     if (curMode != "system") return;
     watchThemeMode();
     console.log("watching", curMode);
-  }, 5000);
+  }, modeWatchTimeDelay);
   animateText();
 };

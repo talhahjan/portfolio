@@ -31,9 +31,9 @@
   html {
     scroll-behavior: smooth;
   }
-  a {
+  /* a {
     @apply hover:text-color-base-alt dark:hover:text-color-base-dark-alt duration-300 text-base;
-  }
+  } */
   body {
     @apply p-0 m-0 box-border font-Poppins font-normal bg-body dark:bg-body-dark text-color-base dark:text-color-base-dark;
   }
