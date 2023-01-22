@@ -334,66 +334,80 @@
             class="grid grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-[max-content_1fr_max-content] justify-center items-center gap-x-5 relative"
           >
             <div
-              class="grid gap-y-4 text-xl absolute top-0 left-0 translate-y-1/2 md:translate-y-0 md:static"
+              class="inline-flex text-xl absolute top-1/2 left-0 -translate-y-full md:translate-y-0 h-48 md:static"
             >
-              <button class="text-primary hover:text-primary-alt">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  class="bi bi-linkedin"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325 1.42-3.592 3.5-3.592.699-.002 1.399.034 2.095.107v2.42h-1.435c-1.128 0-1.348.538-1.348 1.325v1.735h2.697l-.35 2.725h-2.348V21H20a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1z"
-                  ></path>
-                </svg>
-              </button>
-              <button class="text-primary hover:text-primary-alt">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-linkedin"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-                  />
-                </svg>
-              </button>
-              <button class="text-primary hover:text-primary-alt">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-github"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-                  />
-                </svg>
-              </button>
-              <button
-                class="home_social-icon text-primary hover:text-primary-alt"
+              <div
+                class="social-link-wrapper flex flex-col gap-4 self-center bg-white dark:bg-opacity-10 rounded-2xl py-4 px-2 shadow-xl"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-instagram"
-                  viewBox="0 0 16 16"
+                <a
+                  href="https://www.facebook.com/talhah.jan"
+                  target="_blank"
+                  class="text-primary hover:text-primary-alt"
+                  title="My facebook account"
                 >
-                  <path
-                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/khalid-dashti/"
+                  target="_blank"
+                  class="text-primary hover:text-primary-alt"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/talhahjan"
+                  target="_blank"
+                  class="text-primary hover:text-primary-alt"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://twitter.com/mKhalidDashti"
+                  target="_blank"
+                  class="home_social-icon text-primary hover:text-primary-alt"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
             <div
               class="justify-self-center md:justify-self-end md:order-3 md:pr-10"
@@ -550,7 +564,7 @@
               <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700" />
 
               <div
-                class="about_info grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] justify-center md:justify-start gap-x-2 mb-1 [&>div]:bg-white [&>div]:dark:bg-white/10 [&>div]:rounded-lg [&>div]:shadow-lg text-sm"
+                class="about_info grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] justify-center md:justify-start gap-x-2 mb-1 [&>div]:bg-white [&>div]:dark:bg-opacity-5 [&>div]:rounded-lg [&>div]:shadow-lg text-sm [&>div]:border-b-2 [&>div]:border-primary"
               >
                 <div
                   class="about_box flex flex-col justify-center items-center py-2 px-2"
@@ -661,7 +675,7 @@
                 class="skill grid grid-flow-row gap-y-1.5"
               >
                 <li
-                  class="skill bg-white dark:bg-white/5 rounded shadow-md p-2"
+                  class="skill bg-white dark:bg-opacity-5 rounded shadow-md p-2"
                 >
                   <div
                     class="skill-data my-2 uppercase flex justify-between items-center"
@@ -694,7 +708,7 @@
                 </li>
 
                 <li
-                  class="skill bg-white dark:bg-white/5 rounded shadow-md p-2"
+                  class="skill bg-white dark:bg-opacity-5 rounded shadow-md p-2"
                 >
                   <div
                     class="skill-data my-2 uppercase flex justify-between items-center"
@@ -728,7 +742,7 @@
                 </li>
 
                 <li
-                  class="skill bg-white dark:bg-white/5 rounded shadow-md p-2"
+                  class="skill bg-white dark:bg-opacity-5 rounded shadow-md p-2"
                 >
                   <div
                     class="skill-data my-2 uppercase flex justify-between items-center"
@@ -762,7 +776,7 @@
                 </li>
 
                 <li
-                  class="skill bg-white dark:bg-white/5 rounded shadow-md p-2"
+                  class="skill bg-white dark:bg-opacity-5 rounded shadow-md p-2"
                 >
                   <div
                     class="skill-data my-2 uppercase flex justify-between items-center"
@@ -829,7 +843,7 @@
                 class="skill grid grid-flow-row gap-y-1.5"
               >
                 <li
-                  class="skill bg-white dark:bg-white/5 rounded shadow-md p-2"
+                  class="skill bg-white dark:bg-opacity-5 rounded shadow-md p-2"
                 >
                   <div
                     class="skill-data my-2 uppercase flex justify-between items-center"
@@ -863,7 +877,7 @@
                 </li>
 
                 <li
-                  class="skill bg-white dark:bg-white/5 rounded shadow-md p-2"
+                  class="skill bg-white dark:bg-opacity-5 rounded shadow-md p-2"
                 >
                   <div
                     class="skill-data my-2 uppercase flex justify-between items-center"
@@ -897,7 +911,7 @@
                 </li>
 
                 <li
-                  class="skill bg-white dark:bg-white/5 rounded shadow-md p-2"
+                  class="skill bg-white dark:bg-opacity-5 rounded shadow-md p-2"
                 >
                   <div
                     class="skill-data my-2 uppercase flex justify-between items-center"
@@ -930,7 +944,7 @@
                 </li>
 
                 <li
-                  class="skill bg-white dark:bg-white/5 rounded shadow-md p-2"
+                  class="skill bg-white dark:bg-opacity-5 rounded shadow-md p-2"
                 >
                   <div
                     class="skill-data my-2 uppercase flex justify-between items-center"
@@ -977,7 +991,7 @@
           </h2>
 
           <div
-            class="services-list grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5 [&>div]:bg-white [&>div]:dark:bg-white/5 [&>div]:p-5 [&>div]:text-sm [&>div]:rounded-lg [&>div]:font-light [&>div>h2]:text-xl [&>div>h2]:font-medium [&>div>h2]:mb-3.5 [&>div>a]:text-sm [&>div>a]:mt-5 [&>div>a]:inline-block"
+            class="services-list grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5 [&>div]:bg-white [&>div]:dark:bg-opacity-5 [&>div]:p-5 [&>div]:text-sm [&>div]:rounded-lg [&>div]:font-light [&>div>h2]:text-xl [&>div>h2]:font-medium [&>div>h2]:mb-3.5 [&>div>a]:text-sm [&>div>a]:mt-5 [&>div>a]:inline-block [&>div]:border-b-2 [&>div]:border-primary"
           >
             <div
               class="transition-colors duration-75 hover:bg-gradient-to-tl hover:from-primary hover:to-primary-alt hover:text-inverted hover:-translate-y-2.5 shadow-md hover:shadow-primary/50 group"
@@ -1060,7 +1074,9 @@
           <div
             class="portfolio_container grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-x-5 gap-y-10"
           >
-            <div class="relative bg-white dark:bg-white/5 rounded-lg shadow-lg">
+            <div
+              class="relative bg-white dark:bg-opacity-5 rounded-lg shadow-lg"
+            >
               <div class="flex">
                 <div
                   class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded mx-4 -mt-4"
@@ -1100,7 +1116,9 @@
               </div>
             </div>
 
-            <div class="relative bg-white dark:bg-white/5 rounded-lg shadow-lg">
+            <div
+              class="relative bg-white dark:bg-opacity-5 rounded-lg shadow-lg"
+            >
               <div class="flex">
                 <div
                   class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded mx-4 -mt-4"
@@ -1140,7 +1158,9 @@
               </div>
             </div>
 
-            <div class="relative bg-white dark:bg-white/5 rounded-lg shadow-lg">
+            <div
+              class="relative bg-white dark:bg-opacity-5 rounded-lg shadow-lg"
+            >
               <div class="flex">
                 <div
                   class="relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded mx-4 -mt-4"
@@ -1192,31 +1212,27 @@
         </section>
       </main>
 
-      <footer class="bg-white dark:bg-white/5 rounded-t-md px-3">
+      <footer
+        class="bg-gradient-to-tl from-primary to-primary-alt rounded-t-md px-3"
+      >
         <div
-          class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] justify-between gap-5 [&>*_h2]:text-md [&>*_h2]:mb-2 [&>*_h2]:font-semibold [&_ul_li]:my-2 p-4"
+          class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] justify-between md:justify-end gap-5 [&>*_h2]:text-lg [&>*_h2]:mb-2 [&>*_h2]:text-inverted [&>*_h2]:font-semibold [&>*_h2]:font-Courgette [&_ul_li]:my-2 p-4"
         >
           <div>
             <h2>Quick Links</h2>
             <ul>
               <li>
-                <a
-                  href="#"
-                  class="hover:text-color-base-alt dark:text-color-base-dark-alt dark:hover:text-color-base-dark duration-300"
+                <a href="#" class="text-inverted hover:text-muted duration-500"
                   >Blog</a
                 >
               </li>
               <li>
-                <a
-                  href="#"
-                  class="hover:text-color-base-alt dark:text-color-base-dark-alt dark:hover:text-color-base-dark duration-300"
+                <a href="#" class="text-inverted hover:text-muted duration-500"
                   >Hire Me</a
                 >
               </li>
               <li>
-                <a
-                  href="#"
-                  class="hover:text-color-base-alt dark:text-color-base-dark-alt dark:hover:text-color-base-dark duration-300"
+                <a href="#" class="text-inverted hover:text-muted duration-500"
                   >Contact Me</a
                 >
               </li>
@@ -1226,23 +1242,17 @@
             <h2>Services</h2>
             <ul>
               <li>
-                <a
-                  href="#"
-                  class="hover:text-color-base-alt dark:text-color-base-dark-alt dark:hover:text-color-base-dark duration-300"
+                <a href="#" class="text-inverted hover:text-muted duration-500"
                   >Web Devlopment</a
                 >
               </li>
               <li>
-                <a
-                  href="#"
-                  class="hover:text-color-base-alt dark:text-color-base-dark-alt dark:hover:text-color-base-dark duration-300"
+                <a href="#" class="text-inverted hover:text-muted duration-500"
                   >Digital Marketing</a
                 >
               </li>
               <li>
-                <a
-                  href="#"
-                  class="hover:text-color-base-alt dark:text-color-base-dark-alt dark:hover:text-color-base-dark duration-300"
+                <a href="#" class="text-inverted hover:text-muted duration-500"
                   >Seo Services</a
                 >
               </li>
@@ -1252,123 +1262,106 @@
             <h2>Legal</h2>
             <ul>
               <li>
-                <a
-                  href="#"
-                  class="hover:text-color-base-alt dark:text-color-base-dark-alt dark:hover:text-color-base-dark duration-300"
+                <a href="#" class="text-inverted hover:text-muted duration-500"
                   >Privacy Policy</a
                 >
               </li>
               <li>
-                <a
-                  href="#"
-                  class="hover:text-color-base-alt dark:text-color-base-dark-alt dark:hover:text-color-base-dark duration-300"
+                <a href="#" class="text-inverted hover:text-muted duration-500"
                   >Term Of Use</a
                 >
               </li>
               <li>
-                <a
-                  href="#"
-                  class="hover:text-color-base-alt dark:text-color-base-dark-alt dark:hover:text-color-base-dark duration-300"
+                <a href="#" class="text-inverted hover:text-muted duration-500"
                   >Disclaimer</a
                 >
               </li>
             </ul>
           </div>
-          <!-- <div>
+          <div>
             <h2>Social Media</h2>
             <ul>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Term Of Use</a></li>
-              <li><a href="#">Disclaimer</a></li>
+              <li>
+                <div class="inline-flex mr-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+                    />
+                  </svg>
+                </div>
+                <a href="http://facebook.com/talhah.jan" target="_blank">
+                  Facebook</a
+                >
+              </li>
+              <li>
+                <div class="inline-flex mr-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-twitter"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                    />
+                  </svg>
+                </div>
+                <a href="https://twitter.com/mKhalidDashti" target="_blank">
+                  Twitter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/khalid-dashti/"
+                  target="_blank"
+                >
+                  <div class="inline-flex mr-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-linkedin"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                      />
+                    </svg>
+                  </div>
+                  <a href="#"> LinkedIn</a>
+                </a>
+              </li>
             </ul>
-          </div> -->
-        </div>
-        <hr
-          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
-        />
-
-        <div
-          class="flex justify-between flex-col-reverse md:flex-row gap-y-2 my-2"
-        >
-          <span class="text-center text-sm"
-            >© Copyright
-            <script>
-              var date = new Date();
-              document.write(`${date.getFullYear()}-${date.getFullYear() + 5}`);
-            </script>
-            All Rights Reserved.
-          </span>
-          <div class="flex justify-center space-x-6">
-            <a
-              href="https://www.facebook.com/talhah.jan"
-              target="_blank"
-              class="hover:text-color-base-alt dark:text-color-base-dark-alt dark:hover:text-color-base-dark duration-300"
-            >
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 448 512">
-                <path
-                  d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
-                />
-              </svg>
-            </a>
-            <a
-              href="#"
-              class="hover:text-color-base-alt dark:text-color-base-dark-alt dark:hover:text-color-base-dark duration-300"
-            >
-              <svg
-                class="w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
-                />
-              </svg>
-            </a>
-            <a
-              href="#"
-              class="hover:text-color-base-alt dark:text-color-base-dark-alt dark:hover:text-color-base-dark duration-300"
-            >
-              <svg
-                class="w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </a>
-
-            <a
-              href=""
-              class="hover:text-color-base-alt dark:text-color-base-dark-alt dark:hover:text-color-base-dark duration-300"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-                />
-              </svg>
-            </a>
           </div>
+        </div>
+        <hr class="my-2 border-t-white sm:mx-auto lg:my-4" />
+
+        <div class="text-sm text-inverted text-center md:text-left">
+          © Copyright
+          <script>
+            var date = new Date();
+            document.write(`${date.getFullYear()}-${date.getFullYear() + 5}`);
+          </script>
+          All Rights Reserved.
         </div>
       </footer>
     </div>
 
     <div
-      class="fixed right-0 top-32 bg-white dark:bg-white/5 backdrop-blur-md py-2 px-4 border-r-0 border border-white/10 rounded-l-md shadow-md z-50 duration-200 translate-x-full"
+      class="fixed right-0 top-32 bg-white dark:bg-opacity-5 backdrop-blur-md py-2 px-4 border-r-0 border border-white/10 rounded-l-md shadow-md z-50 duration-200 translate-x-full"
       id="skin-switcher"
     >
       <button
-        class="skin-switcher-toggler absolute h-8 w-8 top-0 mr-2 cursor-pointer flex items-center justify-center right-full bg-white dark:bg-white/10 backdrop-blur-xl border border-white/10 rounded-full shadow-md shadow-black/10"
+        class="skin-switcher-toggler absolute h-8 w-8 top-0 mr-2 cursor-pointer flex items-center justify-center right-full bg-white bg-opacity-5 backdrop-blur-xl border border-white/10 rounded-full shadow-md shadow-black/10"
         id="skin-switcher-toggler"
       >
         <svg
