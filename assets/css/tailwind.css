@@ -5671,6 +5671,18 @@ textarea.form-control.is-invalid{
   height: calc(100% - 0.25rem);
 }
 
+.h-0\.5{
+  height: 0.125rem;
+}
+
+.h-0{
+  height: 0px;
+}
+
+.h-\[1px\]{
+  height: 1px;
+}
+
 .w-8{
   width: 2rem;
 }
@@ -6793,6 +6805,22 @@ textarea.form-control.is-invalid{
 .bg-\[rgb\(255\2c 0\2c 0\)\]{
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-slate-700\/10{
+  background-color: rgb(51 65 85 / 0.1);
+}
+
+.bg-primary\/10{
+  background-color: rgba(var(--fill-primary), 0.1);
+}
+
+.bg-primary\/90{
+  background-color: rgba(var(--fill-primary), 0.9);
+}
+
+.bg-primary\/40{
+  background-color: rgba(var(--fill-primary), 0.4);
 }
 
 .bg-opacity-5{
