@@ -37,8 +37,6 @@ module.exports = {
       textColor: {
         "color-base": "var(--color-text-base)",
         "color-base-alt": "var(--color-text-base-alt)",
-        "color-base-dark": "var(--color-text-dark-base)",
-        "color-base-dark-alt": "var(--color-text-dark-base-alt)",
         primary: "var(--color-text-primary)",
         muted: "var(--color-text-muted)",
         inverted: "var(--color-text-inverted)",
@@ -55,7 +53,9 @@ module.exports = {
         primary: "rgb(var(--fill-primary))",
         "primary-alt": "rgb(var(--fill-primary-alt))",
       },
-
+      ringColor: {
+        primary: withOpacity("--fill-primary"),
+      },
       animation: {
         animateText: "typingText 4s steps(12) infinite",
         spin2: "spin 4s linear infinite;",
@@ -75,5 +75,8 @@ module.exports = {
   plugins: [
     require("tw-elements/dist/plugin"),
     require("@tailwindcss/aspect-ratio"),
+    // require("@tailwindcss/forms")({
+    //   strategy: "base", // only generate global styles
+    // }),
   ],
 };

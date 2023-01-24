@@ -28,14 +28,16 @@
     --body-bg: 238, 238, 238;
   }
 
+  .dark {
+    --color-text-base: var(--color-text-dark-base);
+    --color-text-base-alt: var(--color-text-dark-base-alt);
+  }
+
   html {
     scroll-behavior: smooth;
   }
-  /* a {
-    @apply hover:text-color-base-alt dark:hover:text-color-base-dark-alt duration-300 text-base;
-  } */
   body {
-    @apply p-0 m-0 box-border font-Poppins font-normal bg-body dark:bg-body-dark text-color-base dark:text-color-base-dark;
+    @apply p-0 m-0 box-border font-Poppins font-normal bg-body dark:bg-body-dark text-color-base;
   }
 
   .navbar-fixed {
@@ -43,6 +45,10 @@
   }
   .wrapper {
     @apply flex flex-col justify-between h-screen max-w-5xl text-left mx-auto gap-2;
+  }
+  .bg-gradient {
+    background-image: var(--tw-gradient-to)
+      linear-gradient(60deg, var(--tw-gradient-stops)) repeat-x;
   }
 
   @keyframes typingText {
