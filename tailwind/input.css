@@ -137,9 +137,6 @@
   --fill-primary: 249, 115, 22;
   --fill-primary-alt: 255 128 35;
 }
-.skin-default {
-  color: black;
-}
 .skin-stone {
   --color-text-primary: rgb(var(--fill-primary));
   --color-text-muted: rgb(rgb(245, 245, 244));
