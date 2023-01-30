@@ -8125,6 +8125,11 @@ textarea.form-control.is-invalid{
   background-color: transparent;
 }
 
+.hover\:bg-gray-900:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-primary:hover{
   --tw-bg-opacity: 1;
   background-color: rgba(var(--fill-primary), var(--tw-bg-opacity));
@@ -8137,10 +8142,6 @@ textarea.form-control.is-invalid{
 
 .hover\:bg-gradient-to-l:hover{
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
-}
-
-.hover\:bg-none:hover{
-  background-image: none;
 }
 
 .hover\:from-primary:hover{
