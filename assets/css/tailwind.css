@@ -8117,6 +8117,11 @@ textarea.form-control.is-invalid{
   border-color: transparent;
 }
 
+.hover\:border-gray-700:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
+}
+
 .hover\:bg-slate-800\/20:hover{
   background-color: rgb(30 41 59 / 0.2);
 }
@@ -8140,8 +8145,17 @@ textarea.form-control.is-invalid{
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-black:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-gradient-to-l:hover{
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}
+
+.hover\:bg-none:hover{
+  background-image: none;
 }
 
 .hover\:from-primary:hover{
@@ -8190,6 +8204,11 @@ textarea.form-control.is-invalid{
 
 .hover\:shadow-primary\/50:hover{
   --tw-shadow-color: rgba(var(--fill-primary), 0.5);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.hover\:shadow-gray-900\/50:hover{
+  --tw-shadow-color: rgb(17 24 39 / 0.5);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
