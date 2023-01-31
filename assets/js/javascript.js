@@ -4,7 +4,7 @@ const navBar = document.querySelector("header nav"),
   ThemeIcon = document.getElementById("themeIcon"),
   themes = document.querySelectorAll('[name="theme"][type="radio"]'),
   html = document.documentElement,
-  defaultMode = "dark", // string : 'dark' , 'light' or 'system'
+  defaultMode = "system", // string : 'dark' , 'light' or 'system'
   //check if darkMode is active in user system
   darkModeQuery = matchMedia("(prefers-color-scheme: dark)"),
   navLinks = document.querySelectorAll("#nav-menu li a"),
@@ -13,10 +13,9 @@ const navBar = document.querySelector("header nav"),
   backendSkills = document.getElementById("skill-list-backend"),
   frontendSkills = document.getElementById("skill-list-frontend"),
   goToTopBtn = document.getElementById("goToTopBtn"),
+  speed = 60,
   skinSwitcherBtn = document.getElementById("skin-switcher-toggler"),
-  skinsList = document.querySelectorAll("#skin-list span"),
-  modeWatchTimeDelay=3000,
-  speed = 60;
+  skinsList = document.querySelectorAll("#skin-list span");
 
 const switchSkin = (skinClass) => {
   document.querySelector("body").className = skinClass;
@@ -80,7 +79,7 @@ window.addEventListener("scroll", () => {
 
 themes.forEach((theme) => {
   theme.addEventListener("click", (event) => {
-    saveTheme(theme.id);
+    saveTheme(theme);
   });
 });
 
@@ -88,12 +87,11 @@ NavBarToggler.addEventListener("click", () => {
   toggleNavbar();
 });
 
-const saveTheme = (themeID) => {
-  let theme = document.getElementById(themeID);
+const saveTheme = (theme) => {
   let svg = theme.nextElementSibling.children[0].outerHTML;
   ThemeIcon.innerHTML = svg;
-  theme.checked = true;
-  switch (themeID) {
+  document.getElementById(theme.id).checked = true;
+  switch (theme.id) {
     case "light":
       localStorage.setItem("theme", "light");
       html.className = "light";
@@ -114,8 +112,21 @@ const saveTheme = (themeID) => {
 };
 
 const watchThemeMode = () => {
-  let mode = localStorage.theme ?? defaultMode;
-  saveTheme(mode);
+  if (localStorage.skin) switchSkin(localStorage.skin);
+
+  if (localStorage.theme === "dark") {
+    let theme = document.getElementById("dark");
+    return saveTheme(theme);
+  } else if (localStorage.theme === "light") {
+    let theme = document.getElementById("light");
+    return saveTheme(theme);
+  } else if (localStorage.theme === "system") {
+    let theme = document.getElementById("system");
+    return saveTheme(theme);
+  } else {
+    let theme = document.getElementById(defaultMode);
+    return saveTheme(theme);
+  }
 };
 
 const backendSkillObserver = new IntersectionObserver(
@@ -188,15 +199,10 @@ backendSkillObserver.observe(backendSkills);
 frontendSkillObserver.observe(frontendSkills);
 
 window.onload = (e) => {
-  if (localStorage.skin) switchSkin(localStorage.skin);
   watchThemeMode();
-  // keep call saveTheme function if dark mode set to system keep watch change of user
+  // if dark mode  set to system keep watch change of user
   //  system setting after every 5 seconds
-  setInterval(() => {
-    let curMode = localStorage.theme ?? defaultMode;
-    if (curMode != "system") return;
-    watchThemeMode();
-    console.log("watching", curMode);
-  }, modeWatchTimeDelay);
+  if (!localStorage.theme || localStorage.theme == "system")
+    setInterval(watchThemeMode, 5000);
   animateText();
 };

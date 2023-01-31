@@ -8068,22 +8068,10 @@ textarea.form-control.is-invalid{
   border-radius: 33% 67% 50% 50% /50% 14% 86% 50%;
 }
 
-.after\:from-transparent::after{
+.after\:bg-primary::after{
   content: var(--tw-content);
-  --tw-gradient-from: transparent;
-  --tw-gradient-to: rgb(0 0 0 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.after\:via-primary::after{
-  content: var(--tw-content);
-  --tw-gradient-to: rgb(var(--fill-primary) / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), rgb(var(--fill-primary)), var(--tw-gradient-to);
-}
-
-.after\:to-primary-alt::after{
-  content: var(--tw-content);
-  --tw-gradient-to: rgb(var(--fill-primary-alt));
+  --tw-bg-opacity: 1;
+  background-color: rgba(var(--fill-primary), var(--tw-bg-opacity));
 }
 
 .after\:shadow::after{
@@ -8117,22 +8105,12 @@ textarea.form-control.is-invalid{
   border-color: transparent;
 }
 
-.hover\:border-gray-700:hover{
-  --tw-border-opacity: 1;
-  border-color: rgb(55 65 81 / var(--tw-border-opacity));
-}
-
 .hover\:bg-slate-800\/20:hover{
   background-color: rgb(30 41 59 / 0.2);
 }
 
 .hover\:bg-transparent:hover{
   background-color: transparent;
-}
-
-.hover\:bg-gray-900:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-primary:hover{
@@ -8143,11 +8121,6 @@ textarea.form-control.is-invalid{
 .hover\:bg-blue-700:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-black:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gradient-to-l:hover{
@@ -8204,11 +8177,6 @@ textarea.form-control.is-invalid{
 
 .hover\:shadow-primary\/50:hover{
   --tw-shadow-color: rgba(var(--fill-primary), 0.5);
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.hover\:shadow-gray-900\/50:hover{
-  --tw-shadow-color: rgb(17 24 39 / 0.5);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
