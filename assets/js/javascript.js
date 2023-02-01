@@ -4,7 +4,7 @@ const navBar = document.querySelector("header nav"),
   ThemeIcon = document.getElementById("themeIcon"),
   themes = document.querySelectorAll('[name="theme"][type="radio"]'),
   html = document.documentElement,
-  defaultMode = "system", // string : 'dark' , 'light' or 'system'
+  defaultMode = "dark", // string : 'dark' , 'light' or 'system'
   //check if darkMode is active in user system
   darkModeQuery = matchMedia("(prefers-color-scheme: dark)"),
   navLinks = document.querySelectorAll("#nav-menu li a"),
